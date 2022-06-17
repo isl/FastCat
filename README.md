@@ -62,7 +62,11 @@ FastCat uses [CouchDB](https://couchdb.apache.org/) and [PouchDB](https://pouchd
     }
 ```
 
-### Contact ### 
+## Configuration ##
+
+tbc
+
+## Contact ##
 
 - Fafalios Pavlos <fafalios@ics.forth.gr>
 - Samaritakis Georgios <samarita@ics.forth.gr>
