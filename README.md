@@ -62,7 +62,7 @@ FastCat uses [CouchDB](https://couchdb.apache.org/) and [PouchDB](https://pouchd
     }
 ```
 
-## Configuration ##
+## Configuration of Transcription Templates ##
 
 tbc
 
