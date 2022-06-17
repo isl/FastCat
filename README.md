@@ -3,8 +3,8 @@
 
 ### Description ###
 
-FastCat is an innovative tool designed for historians and other researchers who need to manually digitize
-structured and semi structured historical documents in a fast and accurate way to create their research
+FastCat is a Web-based system designed for historians and other researchers who need to manually digitize
+structured and semi structured archival documents in a fast and accurate way to create their research
 dataset. It combines the ease of use and quick data entry functions of the classic spreadsheet with the
 information accuracy typically associated with a complex database. It does so by offering data entry
 templates designed to mirror, in the digital space, the structure and data entry logic of the original data
