@@ -102,6 +102,7 @@ FastCat uses [handsontable](https://handsontable.com/) library for some data ent
 To configure/create a new Template the following steps must be followed: 
 
 1. FastCat Application
+
    Each template consists of two files: 
    * templates/template.html (example)
    * templates/js/template.js (example) 
