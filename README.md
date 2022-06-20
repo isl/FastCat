@@ -103,7 +103,7 @@ FastCat is currently configured for the case of archival documents of Maritime H
 Specifically, the below 20 templates are already available, each one representing a type of archival source:
 - Crew List (Ruoli di Equipaggio) (example record [here](https://tinyurl.com/2u35frya))
 - Crew and displacement list (Roll) (example record [here](https://tinyurl.com/4ukzezfe))
-- General Spanish Crew List (64 records) (example record [here](https://tinyurl.com/3axs6ret))
+- General Spanish Crew List (example record [here](https://tinyurl.com/3axs6ret))
 - Accounts book (example record [here](https://tinyurl.com/4uf3bye8))
 - Payroll (of Greek ships) (example record [here](https://tinyurl.com/ztjk4jw7))
 - Payroll (of Russian Steam Navigation and Trading Company) (example record [here](https://tinyurl.com/y5urjhc9))
@@ -136,7 +136,7 @@ To create a new template the following steps must be followed:
   
 2. Database
 
-   To add a new template in the database : 
+   To add a new template in the database: 
    * Go to templates directory and copy one existing template
    * Return to templates directory and Create Document
    * Paste the json you copied before
