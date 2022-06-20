@@ -143,8 +143,6 @@ function createSubTable(parentTableName, subTableName, x, y, row, startCol, endC
                     source: JSON.parse(localStorage.getItem("unit_gr")), vocab: 'unit_gr'}
             ];
             nestedHeaders = [
-                // ['', {label: 'Timespan of Work', colspan: 5}, {label: '', colspan: 23}],
-                //   ['', '', '', {label: 'Total Duration', colspan: 3}, '', {label: 'Discharge ', colspan: 2}, {label: 'Permit', colspan: 2}, {label: 'Monthly Wage', colspan: 2}, {label: 'Equivalent Currency of M.W.', colspan: 2}, {label: 'Total Wage', colspan: 2}, {label: 'Equivalent Currency of T.W.', colspan: 2}, {label: 'Pension Fund', colspan: 2}, {label: 'Equivalent Currency of P.F.', colspan: 2}, {label: 'Bonus', colspan: 2}, {label: 'Equivalent C.B.', colspan: 2}, {label: 'Net Wage', colspan: 2}, {label: 'Equivalent Currency of N.W.', colspan: 2}],
                 ['Profession | Rank', 'Date Type', 'Recruitment Date', 'Discharge Date', 'Months', 'Days', 'Recruitment Location', 'State', 'Location', 'Days', 'Port of Exit', 'Value', 'Unit', 'Value', 'Unit', 'Value', 'Unit', 'Value', 'Unit', 'Value', 'Unit', 'Value', 'Unit', 'Value', 'Unit', 'Value', 'Unit', 'Value', 'Unit', 'Value', 'Unit']
             ];
             data = setSubTableData(voyage_transactions[cnt], row, startCol, endCol);
