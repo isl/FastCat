@@ -136,7 +136,7 @@ To create a new template the following steps must be followed:
   
 2. Database
 
-   To add a new template in the database: 
+   Add the new template to the database: 
    * Go to templates directory and copy one existing template
    * Return to templates directory and Create Document
    * Paste the json you copied before
