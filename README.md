@@ -97,6 +97,8 @@ FastCat uses [handsontable](https://handsontable.com/) library for some data ent
      
 ## Configuration of Transcription Templates ##
 
+**Current Configuration**
+
 FastCat is currently configured for the case of archival documents of Maritime History, in the context of the [SeaLiT Project](https://sealitproject.eu/).
 Specifically, the below 20 templates are already available, each one representing a type of archival source:
 - Crew List (Ruoli di Equipaggio) (example record [here](https://tinyurl.com/2u35frya))
@@ -113,13 +115,14 @@ Specifically, the below 20 templates are already available, each one representin
 - List of ships (example record [here](https://tinyurl.com/2cphfpef))
 - Naval Ship Register List (example record [here](https://tinyurl.com/bdhx87tr))
 - Register of Maritime personel (example record [here](https://tinyurl.com/4v6hnwjj))
-- Register of Maritime workers (Matricole della gente di mare) (example record [here]())
+- Register of Maritime workers (Matricole della gente di mare) (example record [here](https://isl.ics.forth.gr/FastCatTeam/templates/Maritime%20Workers_IT.html?name=2018-10-22T07:47:22.356Z_1&templateTitle=Register%20of%20Maritime%20workers%20(Matricole%20della%20gente%20di%20mare)&mode=teamView))
 - Sailors register (Libro de registro de marineros) (example record [here](https://tinyurl.com/2p8kzm6n))
 - Seagoing Personel (example record [here](https://tinyurl.com/2x5cu37n))
 - Students Register (example record [here](https://tinyurl.com/mryp6cbb))
 - Employment records (Shipyards of Messageries Maritimes, La Ciotat) (example record [here](https://tinyurl.com/yc3havkc))
-- Notarial Deeds (example record [here]())
+- Notarial Deeds (example record [here](https://isl.ics.forth.gr/FastCatTeam/templates/Notarial%20Deeds.html?name=2020-01-17T17:14:17.179Z_2&templateTitle=Notarial%20Deeds&mode=teamView))
 
+**Creation of a new FastCat template**
 
 To create a new template the following steps must be followed: 
 
