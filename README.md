@@ -62,7 +62,7 @@ FastCat uses [handsontable](https://handsontable.com/) library for some data ent
 
  1. Database configuration
  
-     After the successful CouchDB installation, database must contain a directory called public_records and a directory for each entity that is          needed to be documented/extracted (persons/organizations etc.).
+     After the successful CouchDB installation, database must contain a directory called public_records another one called templates and a directory for each entity that is          needed to be documented/extracted (persons/organizations etc.).
   
 2. Clone the repo
    ```sh
