@@ -129,18 +129,18 @@ To create a new template the following steps must be followed:
 1. FastCat Application
 
    Each template consists of two files: 
-   * templates/template.html (example)
-   * templates/js/template.js (example) 
+   * templates/<template_name>.html (example)
+   * templates/js/<template_name>.js (example) 
    
    By editing these two files user can create/modify templates.
   
 2. Database
 
    Add the new template to the database: 
-   * Go to templates directory and copy one existing template
-   * Return to templates directory and Create Document
+   * Go to templates directory and copy the JSON of one existing template
+   * Return to templates directory and create a new document 
    * Paste the json you copied before
-   * Delete the "_rev" row and change the "_id" value to be exactly the same as the name of the new template
+   * Delete the "_rev" row and change the "_id" value to be exactly the same as the name of the new template <template_name>
 
 **Removing a template**
 
