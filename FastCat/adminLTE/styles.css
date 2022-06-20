@@ -1,0 +1,165 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 7, 2017, 8:20:10 PM
+    Author     : samarita
+*/
+
+.recordsBox,.settingsBox,.vocabsBox,.vocabs2Box {
+    display:none;
+}
+.dataTables_filter {
+    visibility:hidden;
+}
+.actionButtons {
+    display:none;
+}
+.skin-blue-light .sidebar-menu>li:hover>a, .skin-blue-light .sidebar-menu>li.active>a {
+    background-color: #D9E4E8;
+}
+table.dataTable tbody>tr.selected, table.dataTable tbody>tr>.selected {
+    background-color: #D9E4E8;
+}
+.table-hover > tbody > tr:hover {
+    background-color: #D9E4E8;
+}
+.btn-app {
+    height:45px;
+    padding:5px 0 0 0;
+    min-width:60px;
+    margin:0;
+}
+
+.settingsBox .box-group .box-body {
+    padding:0;
+}
+hr {
+    margin: 5px 0 5px 0;
+}
+.loader {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.vocabInfo {
+    color: #337ab7;
+}
+.modal-header {
+    background-color: #153544;
+    color: white;
+}
+.termTable thead {
+    background-color: #153544;
+    color: white;
+
+}
+.ribbon {
+    background-color: #3c8dbc;
+    color: white;
+    margin:0;
+    padding: 5px 0 5px 0;
+}
+.fastCatMessenger>li {
+    background-color: #D9E4E8 !important;
+
+}
+
+.fastCatMessenger>li div{
+    background-color: #D9E4E8 !important;
+    color: black;
+}
+.dataTables_scroll
+{
+    overflow: auto; 
+    height: 800px;
+
+}
+/*.dataTables_scroll th{ 
+    position: sticky; 
+    top: 70px; 
+    background-color: white;
+    z-index: 10;
+}*/
+.dataTables_scroll thead:first-child th{ 
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0; 
+    background-color: white;
+    z-index: 10;
+}
+/* Page footer */
+.main-footer {
+    margin-left: 230px;
+    padding: 0;
+}
+@media (max-width: 767px){
+    .main-footer {
+        margin-left: 0;
+    }
+
+}
+
+
+.main-footer.login {
+    margin-left: 0;
+}
+
+div#page-logos{
+    background-color: #FFFFFF;
+    bottom:0px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div#logos-line-1{
+    background-color:#FFFFFF;
+    text-align: center;        
+}
+div#logos-line-2{
+    background-color: #343839;
+    margin-top:5px; 
+    padding:10px 20px;
+    height: 67px;
+}
+div#logos-line-1 img {
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px 0;
+
+}
+
+div#logos-line-2 img {
+    float: right;
+    width: 400px;
+    margin-right: 10px;
+}
+
+div#logos-line-3{
+    color: #FFFFFF;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top:3px; 
+    padding-bottom:3px; 
+    font-size: 13px;   
+    background-color: #343839;    
+
+}
+
+div#logos-line-3 .developedtext{
+    color: #D1D1D1;
+}
+div#logos-line-3 a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div#logos-line-3 a:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div#logos-line-3 a:visited{
+    color: #FFFFFF;
+    text-decoration: none;
+}

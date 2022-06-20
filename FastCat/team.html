@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html id="teamHtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FastCat team</title>
+        <!--Favicon line follows-->
+        <link rel="shortcut icon" href='img/favteam.png' type="image/x-icon" />
+
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <link rel="stylesheet" href="adminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="adminLTE/bower_components/font-awesome/css/font-awesome.min.css"/>
+        <!--Ionicons -->
+        <link rel="stylesheet" href="adminLTE/bower_components/Ionicons/css/ionicons.min.css"/>
+        <!-- bootstrap datepicker -->
+        <link rel="stylesheet" href="adminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="adminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
+        <link rel="stylesheet" href="adminLTE/bower_components/jquery-datatables-checkboxes-1.2.11/dataTables.checkboxes.css"/>
+        <link rel="stylesheet" href="adminLTE/bower_components/datatables.select/select.dataTables.min.css"/>
+        <!--<link rel="stylesheet" href="adminLTE/bower_components/FixedHeader-3.1.4/css/fixedHeader.dataTables.min.css"/>-->
+
+
+        <!-- Select2 -->
+        <link rel="stylesheet" href="adminLTE/bower_components/select2/dist/css/select2.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="adminLTE/css/AdminLTE.min.css"/>
+        <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+              page. However, you can choose any other skin. Make sure you
+              apply the skin class to the body tag so the changes take effect. -->
+        <link rel="stylesheet" href="adminLTE/css/skins/skin-blue-light.min.css"/>
+        <link rel="stylesheet" href="adminLTE/styles.css"/>
+        <link rel="stylesheet" href="adminLTE/teamStyles.css"/>
+
+
+        <link rel="stylesheet" href="css/messenger.css"/>
+        <link rel="stylesheet" href="css/messenger-theme-air.css"/>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Google Font -->
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
+
+        <script>
+            var team = true;
+        </script>
+
+    </head>
+    <!--
+    BODY TAG OPTIONS:
+    =================
+    Apply one or more of the following classes to get the
+    desired effect
+    |---------------------------------------------------------|
+    | SKINS         | skin-blue                               |
+    |               | skin-black                              |
+    |               | skin-purple                             |
+    |               | skin-yellow                             |
+    |               | skin-red                                |
+    |               | skin-green                              |
+    |---------------------------------------------------------|
+    |LAYOUT OPTIONS | fixed                                   |
+    |               | layout-boxed                            |
+    |               | layout-top-nav                          |
+    |               | sidebar-collapse                        |
+    |               | sidebar-mini                            |
+    |---------------------------------------------------------|
+    -->
+    <body class="hold-transition skin-blue-light sidebar-mini">
+        <div class="wrapper">
+
+            <!-- Main Header -->
+            <header class="main-header">
+
+                <!-- Logo -->
+                <a  class="logo" href="team.html">
+                    <!--mini logo for sidebar mini 50x50 pixels -->
+                    <!--<span class="logo-mini"><b>F</b>Cat</span>-->
+                    <!--logo for regular state and mobile devices--> 
+                    <!--<b>Fast Cat</b>-->
+                    <span class="logo-lg pull-left"><img src="img/logoteam-cat.png" width="200"/></span>
+                </a>
+
+                <!-- Header Navbar -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <!-- Navbar Right Menu -->
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+
+                            <!-- User Account: style can be found in dropdown.less -->
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <!--<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">-->
+                                    <span class="hidden-xs" id="user"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header">
+                                        <!--<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">-->
+
+                                        <p>
+                                            Profile info will be here
+                                            <small>Lorem ipsum</small>
+                                        </p>
+
+                                    </li>
+                                    <!--Menu Body--> 
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#" title="Click to edit your info"   id="profile" data-toggle='modal' data-target='#userModal'>Profile</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#" title="Click to change your password" id="pass" data-toggle='modal' data-target='#passwordModal'>Change Password</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#" title="Click to sign out" id="logout">Sign out</a>
+                                            </div>
+                                        </div>
+                                        <!--/.row--> 
+                                        <!--                                          <div class="pull-left">
+                                                                                    <a href="#" class="btn btn-default btn-flat" id="profile" data-toggle='modal' data-target='#userModal'>Profile</a>
+                                                                                </div>
+                                                                                 <div class="pull-left" style="margin-left:10px;margin-right:10px;">
+                                                                                    <a href="#" class="btn btn-default btn-flat" id="pass" data-toggle='modal' data-target='#passwordModal'>Change Password</a>
+                                                                                </div>
+                                                                                <div class="pull-right">
+                                                                                    <a href="#" class="btn btn-default btn-flat" id="logout">Sign out</a>
+                                                                                </div>-->
+
+                                    </li>
+                                    <!-- Menu Footer-->
+                                    <!--                                    <li class="user-footer">
+                                                                            <div class="pull-left">
+                                                                                <a href="#" class="btn btn-default btn-flat" id="profile" data-toggle='modal' data-target='#userModal'>Profile</a>
+                                                                            </div>
+                                                                             <div class="pull-left" style="margin-left:10px;margin-right:10px;">
+                                                                                <a href="#" class="btn btn-default btn-flat" id="pass" data-toggle='modal' data-target='#passwordModal'>Change Password</a>
+                                                                            </div>
+                                                                            <div class="pull-right">
+                                                                                <a href="#" class="btn btn-default btn-flat" id="logout">Sign out</a>
+                                                                            </div>
+                                                                        </li>-->
+                                </ul>
+                            </li>
+                            <!-- Control Sidebar Toggle Button -->
+                            <!--                            <li>
+                                                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                                                        </li>-->
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+
+                    <!-- Sidebar Menu -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <!--<li class="header">HEADER</li>-->
+                        <!-- Optionally, you can add icons to the links -->
+                        <li class="active"><a href="#" id="allRecordsLink"> <i class="fa fa-table"></i><span>All Records</span></a></li>
+                        <li><a href="#" id="myRecordsLink"> <i class="fa fa-table"></i><span>My Records</span></a></li>
+                        <li><a href="#" id="vocabsLink"> <i class="fa fa-table"></i><span>Vocabularies</span></a></li>
+                        <!--<li><a href="#" id="instancesLink"><i class="fa fa-table"></i> <span>Instances</span></a></li>-->
+                        <li class="header">Instances</li>
+                        <li style="padding-left: 15px;"><a href="#" id="organizationsLink"> <i  class="fa fa-table"></i><span>Legal Entities</span></a></li>
+                        <li style="padding-left: 15px;"><a href="#" id="locationsLink"> <i  class="fa fa-table"></i><span>Locations</span></a></li>
+                        <li style="padding-left: 15px;"><a href="#" id="personsLink"> <i  class="fa fa-table"></i><span>Persons</span></a></li>
+                        <li style="padding-left: 15px;"><a href="#" id="shipsLink"> <i  class="fa fa-table"></i><span>Ships</span></a></li>
+                        <!--                        <li class="header">Ship Voyages</li>                       
+                                                <li style="padding-left: 15px;"><a href="#" id="ship_voyages"> <i  class="glyphicon glyphicon-new-window"></i><span>Voyages on Map</span></a></li>-->
+
+                        <li><a href="#" id="downloadsLink"><i class="fa fa-download"></i> <span>Download Fast Cat</span></a></li>
+
+
+                        <!--                        <li class="header">Download Fast Cat</li>
+                                                <li style="padding-left: 15px;"><a href="../downloads/FastCat v2.1 (Windows).zip" > <i  class="fa fa-download"></i><span>Version 2.1 (Windows)</span></a></li>
+                                                <li style="padding-left: 15px;"><a href="../downloads/FastCat v2.1 (Mac).zip"> <i  class="fa fa-download"></i><span>Version 2.1 (Mac)</span></a></li>-->
+
+                        <!--                        <li class="treeview menu-open">
+                                                    <a href="#">                                
+                                                        <i class="fa fa-table"></i><span>Instances</span>
+                                                        <span class="pull-right">
+                                                            <i class="fa fa-angle-left "></i>
+                                                        </span>
+                                                    </a>
+                                                    <ul class="treeview-menu">
+                                                         <li style="padding: 10px 0px 0px 33px"><div><i style="padding-right: 5px;" class="fa fa fa-file-pdf-o"></i><a target='_blank' href="Guide.pdf">Quick User Guide</a></div></li> 
+                                                        <li style="padding: 10px 0px 15px 33px"><div><i style="padding-right: 5px;" class="fa fa-table"></i><a href="#">Locations</a></div></li>                               
+                                                    </ul>
+                                                </li>  -->
+                        <li><a href="#" id="settingsLink"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+
+                        <li class="treeview">
+                            <a href="#">                                
+                                <i class="fa fa-question-circle "></i><span>Help</span>
+                                <span class="pull-right">
+                                    <i class="fa fa-angle-left "></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <!-- <li style="padding: 10px 0px 0px 33px"><div><i style="padding-right: 5px;" class="fa fa fa-file-pdf-o"></i><a target='_blank' href="Guide.pdf">Quick User Guide</a></div></li> -->
+                                <li style="padding: 10px 0px 15px 33px"><div><i style="padding-right: 5px;" class="fa fa fa-file-pdf-o"></i><a target='_blank' href="Manual Fast Cat Team_Version 2.1.pdf">Manual</a></div></li>                               
+                                <!--<li style="padding: 10px 0px 15px 33px"><div><i style="padding-right: 5px;" class="fa fa fa-file-pdf-o"></i><a target='_blank' href="Manual.pdf">Manual</a></div></li>-->                               
+
+                            </ul>
+                        </li>  
+
+                    </ul>
+                    <!-- /.sidebar-menu -->
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+
+
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1 class="col-sm-10">
+                        ALL RECORDS
+                    </h1>
+                    <div class="input-group col-sm-2 searchBox">
+                        <input type="text" class="form-control" id="recordsSearchBox">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-flat">
+                                <i class="fa fa-search"></i>  
+                            </button>
+                        </span>
+                    </div>
+
+                </section>
+
+                <!-- Main content -->
+                <section class="content container-fluid">
+
+                    <!--------------------------
+                    | Your Page Content Here |
+                    -------------------------->           
+
+
+                    <div class="box recordsBox">
+
+                        <div class="box-body">
+                            <div class="btn-group actionButtons col-sm-6">
+                                <button id="importRecordsButton" title="Import record(s)" type="button" class="btn btn-default"><i class="glyphicon glyphicon-log-in"></i></button>
+                                <button id="exportRecordsButton" title="Export record(s)" type="button" class="btn btn-default"><i class="glyphicon glyphicon-log-out"></i></button>
+                                <button id="deleteRecordsButton" title="Delete record(s)" type="button" class="btn btn-default"><i class="glyphicon glyphicon-trash"></i></button>
+                            </div>
+
+                            <table id="recordsTable" class="table table-bordered table-striped table-hover">
+
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>ID</th>
+                                        <th>Template Title</th>
+                                        <th>Record Title</th>
+                                        <th>Record Author</th>
+                                        <th>Related Template Categories</th>
+                                        <th>Related Organization</th>
+
+                                        <th>Last Modification Date</th>
+                                        <th>Status</th>
+
+                                        <th class="no-sort"></th>
+                                    </tr>                                   
+                                </thead>
+                                <tbody></tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <th></th>
+                                        <th>ID</th>
+                                        <th>Template Title</th>
+                                        <th>Record Title</th>
+                                        <th>Record Author</th>
+                                        <th>Related Template Categories</th>
+                                        <th>Related Organization</th>
+
+                                        <th>Last Modification Date</th>
+                                        <th>Status</th>
+
+                                        <th class="no-sort"></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="box vocabsBox">
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <table id="vocabsTable" class="table table-bordered table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Vocabulary Title</th>
+                                        <th>Broader vocabulary category</th>
+                                        <th>Source Language</th>
+                                        <th>Used in template</th>
+                                        <th>Related Organization</th>                                       
+                                        <th class="no-sort"></th>
+                                    </tr>
+
+                                </thead>
+                                <tbody></tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <th>Vocabulary Title</th>
+                                        <th>Broader vocabulary category</th>
+                                        <th>Source Language</th>
+                                        <th>Used in template</th>
+                                        <th>Related Organization</th>                                      
+                                        <th class="no-sort"></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                    <div class="box vocabs2Box">
+
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="box-group vocabs2" id="accordion">
+                                <div class="vocabInfo"></div>
+                                <h5 class="col-sm-10" style="margin-top: 0;">Show terms used in template type: 
+                                    <select id="templateTypeCombo" name="templateTypeCombo" data-id="templateType" data-placeholder="Choose template" class="form-control" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select> and record: 
+                                    <select id="recordCombo" name="recordCombo" data-id="record" data-placeholder="Choose record" class="form-control" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select>
+                                    <!--button type="button" class="btn termsButton btn-default">Show table of terms</button-->
+
+                                </h5>
+
+
+                                <table id="vocabs2Table" class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+                                            <th>Original Source Term</th>
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Preferred Term (English)</th>
+                                            <th>Broader Term</th>
+                                            <!--<th>Connection to thesaurus</th>-->
+                                            <th>Status</th>
+                                            <th class="no-sort"></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+                                            <th>Original Source Term</th>
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Preferred Term (English)</th>
+                                            <th>Broader Term</th>
+                                            <!--<th>Connection to thesaurus</th>-->
+                                            <th>Status</th>
+                                            <th class="no-sort"></th>
+
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+
+
+
+                    </div>
+                    <!-- /.box -->
+                    <div class="box locationsBox">
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="box-group locations" id="accordion">
+                                <div class="vocabInfo"></div>
+                                <h5 class="col-sm-10" style="margin-top: 0;">Show instances used in template type: 
+                                    <select id="locationsTemplateTypeCombo" name="templateTypeCombo" data-id="templateType" data-placeholder="Choose template" class="form-control cleverCombo" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select> and record: 
+                                    <select id="locationsRecordCombo" name="recordCombo" data-id="record" data-placeholder="Choose record" class="form-control cleverCombo" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select>
+                                </h5>
+                                <table id="locationsTable" class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                        <tr>
+
+                                            <th ><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+                                            <th>Source Location name</th>
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Corrected/Vernacular Location name</th>
+                                            <th>Other Location name</th>
+
+                                            <th>Location Type</th>
+                                            <th>Broader Location name</th>
+                                            <!--<th>Broader Location type</th>-->
+                                            <th>iD</th>
+                                            <!--<th>Preferred TGN Location name</th>-->
+                                            <th>Coordinates</th>
+                                            <th>Certainty</th>
+                                            <th>Status</th>
+
+                                            <th class="no-sort"></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th ><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+                                            <th>Source Location name</th>
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Corrected/Vernacular Location name</th>
+                                            <th>Other Location name</th>
+                                            <th>Location Type</th>
+                                            <th>Broader Location name</th>
+                                            <!--<th>Broader Location type</th>-->
+                                            <th>iD</th>
+                                            <!--<th>Preferred TGN Location name</th>-->
+                                            <th>Coordinates</th>
+                                            <th>Certainty</th>
+
+                                            <th>Status</th>
+                                            <th class="no-sort"></th>
+
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <div class="box organizationsBox">
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="box-group organizations" id="accordion">
+                                <div class="vocabInfo"></div>
+                                <h5 class="col-sm-10" style="margin-top: 0;">Show instances used in template type: 
+                                    <select id="organizationsTemplateTypeCombo" name="templateTypeCombo" data-id="templateType" data-placeholder="Choose template" class="cleverCombo form-control" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select> and record: 
+                                    <select id="organizationsRecordCombo" name="recordCombo" data-id="record" data-placeholder="Choose record" class="cleverCombo form-control" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select> 
+                                </h5>
+                                <table id="organizationsTable" class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+
+                                            <th>Legal entity</th>
+                                            <!--<th>Entity type</th>-->
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Status</th>
+
+                                            <th class="no-sort"></th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+
+                                            <th>Legal entity</th>
+                                            <!--<th>Entity type</th>-->
+
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Status</th>
+
+                                            <th class="no-sort"></th>
+
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <div class="box personsBox">
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="box-group persons" id="accordion">
+                                <div class="vocabInfo"></div>
+                                <h5 class="col-sm-10" style="margin-top: 0;">Show instances used in template type: 
+                                    <select id="personsTemplateTypeCombo" name="templateTypeCombo" data-id="templateType" data-placeholder="Choose template" class="form-control cleverCombo" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select> and record: 
+                                    <select id="personsRecordCombo" name="recordCombo" data-id="record" data-placeholder="Choose record" class="form-control cleverCombo" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select>
+                                </h5>
+                                <table id="personsTable" class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+
+                                            <th>Name</th>
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Surname A</th>
+                                            <th>Surname B</th>
+                                            <th>Maiden name</th>
+                                            <th>Fathers name</th>
+                                            <th>Place of Birth</th>
+                                            <th>Date of Birth</th>
+                                            <th>Date of Death</th>
+                                            <th>Registration number</th>
+                                            <th>Status| Capacity |Role</th>
+                                            <th>Status</th>
+                                            <th class="no-sort"></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+
+                                            <th>Name</th>
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Surname A</th>
+                                            <th>Surname B</th>
+                                            <th>Maiden name</th>
+                                            <th>Fathers name</th>
+                                            <th>Place of Birth</th>
+                                            <th>Date of Birth</th>
+                                            <th>Date of Death</th>
+                                            <th>Registration number</th>
+                                            <th>Status| Capacity |Role</th>
+                                            <th>Status</th>
+                                            <th class="no-sort"></th>
+
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <div class="box shipsBox">
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="box-group ships" id="accordion">
+                                <div class="vocabInfo"></div>
+
+                                <h5 class="col-sm-10" style="margin-top: 0;">Show instances used in template type: 
+                                    <select id="shipsTemplateTypeCombo" name="templateTypeCombo" data-id="templateType" data-placeholder="Choose template" class="cleverCombo form-control" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select> and record: 
+                                    <select id="shipsRecordCombo" name="recordCombo" data-id="record" data-placeholder="Choose record" class="cleverCombo form-control" style="display:inline;width:20%;" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All</option>
+                                    </select>
+                                </h5>
+                                <!--<button class='sameMark'>Mark as same</button>-->
+
+
+                                <!--<button class='sameMark'>Mark as same</button>-->
+
+                                <table id="shipsTable" class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+
+                                            <th>Name</th>
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Previous name</th>
+                                            <th>Type</th>
+                                            <th>Call signal</th>
+                                            <th>Construction location</th>
+                                            <th>Construction date</th>
+                                            <th>Telegraphic code</th>
+                                            <th>Flag</th>
+                                            <th>Owner Company</th>
+                                            <!--<th>Registration folio</th>-->
+                                            <th>Registration list</th>
+                                            <th>Registration number</th>
+                                            <th>Registration location</th>
+
+                                            <th>Status</th>
+
+                                            <th class="no-sort"></th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th><i title="Position Info" class="term glyphicon glyphicon-info-sign"></i></th>
+
+                                            <th>Name</th>
+                                            <th>Templates</th>
+                                            <th>Records</th>
+                                            <th>Previous name</th>
+                                            <th>Type</th>
+                                            <th>Call signal</th>
+                                            <th>Construction location</th>
+                                            <th>Construction date</th>
+                                            <th>Telegraphic code</th>
+                                            <th>Flag</th>
+                                            <th>Owner Company</th>
+                                            <!--<th>Registration folio</th>-->
+                                            <th>Registration list</th>
+                                            <th>Registration number</th>
+                                            <th>Registration location</th>
+
+                                            <th>Status</th>
+
+                                            <th class="no-sort"></th>
+
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+
+                    <div class="box settingsBox" >
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Actions (<b>Warning</b>: These actions should be used with caution!)</h3>
+                            <div class="box-tools pull-right">
+                                <!-- Buttons, labels, and many other things can be placed here! -->
+                                <!-- Here is a label for example -->
+                                <!--span class="label label-primary">Label</span-->
+                            </div>
+                            <!-- /.box-tools -->
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body ">
+                            <div class="box-group">
+                                <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+                                <div class="box-body">
+                                    Create a full Fast Cat team backup.
+                                    <a id="backupButton" class="btn btn-app pull-right">
+                                        <i class="glyphicon glyphicon-cloud-download"></i> 
+                                        Backup
+                                    </a>
+                                </div>
+                                <hr/>
+                                <div class="box-body">
+                                    Repair instances or vocaburies. Use this action to restore instances if something is wrong (e.g. A specific instance is missing or something is wrong with
+                                    instances marked as same) or restore terms.
+                                    <!--                                    <a id="repairButton" class="btn btn-app pull-right">
+                                                                            <i class="glyphicon glyphicon-cloud-download"></i> 
+                                                                            Repair
+                                                                        </a>-->
+                                    <div class="pull-right dropdown show">
+                                        <a id="lala" class="btn btn-app pull-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="glyphicon glyphicon-erase"></i> 
+                                            Repair
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" class="repairVocabs" data-type="locations">Vocabularies</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#" class="repairInstance" data-type="locations">Locations</a></li>
+                                            <li><a href="#" class="repairInstance" data-type="organizations">Legal Entities</a></li>
+                                            <li><a href="#" class="repairInstance" data-type="persons">Persons</a></li>
+                                            <li><a href="#" class="repairInstance" data-type="ships">Ships</a></li></ul></div>
+
+                                </div>
+                                <hr/>
+                                <div class="box-body">
+                                    Merge clones. Use this action to merge clone instances (clones based on position info)
+                                    <!--                                    <a id="repairButton" class="btn btn-app pull-right">
+                                                                            <i class="glyphicon glyphicon-cloud-download"></i> 
+                                                                            Repair
+                                                                        </a>-->
+                                    <div class="pull-right dropdown show">
+                                        <a id="lala" class="btn btn-app pull-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="glyphicon glyphicon-link"></i> 
+                                            Merge
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" class="mergeDiffInstance" data-type="locations">Locations</a></li>
+                                            <li><a href="#" class="mergeDiffInstance" data-type="organizations">Legal Entities</a></li>
+                                            <li><a href="#" class="mergeDiffInstance" data-type="persons">Persons</a></li>
+                                            <li><a href="#" class="mergeDiffInstance" data-type="ships">Ships</a></li></ul></div>
+
+                                </div>
+                                <hr/>
+                                <div class="box-body">
+                                    Split instances. Use this action to make the transition from our original instances architecture (1 database with 4 files) to our new one (4 databases with files based on first letter).
+                                    <a id="splitButton" class="btn btn-app pull-right">
+                                        <i class="glyphicon glyphicon-fullscreen"></i> 
+                                        Split
+                                    </a>
+                                </div>
+                                
+                            </div>
+                          
+
+
+                        </div>
+                    </div>
+                    <div class="box downloadsBox" >
+                        <div class="box-header with-border">
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- /.box -->
+
+
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div id="page-logos">
+                    <div id="logos-line-3">
+
+                        <a target="_blank" href="help/termsOfUse.html" title="Terms of Use">Terms of Use</a>
+                        | 
+                        <a target="_blank" href="help/privacyPolicy.html" title="Privacy Policy"> Privacy Policy</a>
+                        | © 2019<span id="untilYear">- 2019 </span><script language="javascript" type="text/javascript"> var d = new Date();
+                            if (d.getFullYear() == 2019) {
+                                document.getElementById("untilYear").innerHTML = ('');
+                            } else {
+                                document.getElementById("untilYear").innerHTML = ('- ' + d.getFullYear() + ' ');
+                            }</script>
+                        <a target="_blank" href="http://www.ics.forth.gr/isl/cci.html">FORTH-ICS CCI</a>
+
+                        <a class="pull-right" href="changes/changes.htm" id="version" target="_blank"></a>
+                    </div>
+                    <div id="logos-line-1" class="row">
+              
+                    </div>
+                    <div id="logos-line-2">
+                        <a target="_blank" href="https://www.ics.forth.gr/isl/index_main.php?l=e&c=252"><img   src="img/Logos_ICS_ISL_CCi_White_TransparentBack.png" title="Foundation for Research and Technology (FORTH) | Institute of Computer Science | Centre for Cultural Informatics"></a>
+                    </div>
+                </div>
+            </footer>
+
+
+
+            <!-- ./wrapper -->
+
+            <!-- Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="statusModal"  role="dialog" aria-labelledby="statusModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <form class="statusPopup" role="form">                        
+                                <div class='form-group'> 
+                                    <label for='status'>Status</label>
+                                    <select id='status' name='status' data-id='status' data-placeholder='Status' class='form-control select2' style='width: 100%;'>
+                                        <option value="Under processing">Under processing</option>
+                                        <option value="Ready for Review">Ready for Review</option>   
+                                        <option value="Reviewed and ready for publishing">Reviewed and ready for publishing</option>   
+
+                                    </select>
+                                </div>
+                            </form>
+                            <p class="uploadWarning hidden"></p>
+
+                            <!--<p class="uploadWarning hidden"><b>WARNING:</b>Changing the status to "Ready for publishing" means that as soon as the next synchronization of Fast Cat manager and the Search engine is going to be realized, all data from this record will be uploaded to the Search engine(including vocabularies and instances). The uploaded data can not be retrieved from the Search engine. You can only undo the action by choosing "Under processing" before the synchronization has happened. Are you sure you want to upload your data? </p>-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="setStatus" data-dismiss="modal">Change</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="termModal"  role="dialog" aria-labelledby="termModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header team">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="termModalLabel">Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="termPopup" role="form">                        
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="editTermModal"  role="dialog" aria-labelledby="editTermModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header team">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="editTermModalLabel">Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="editTermPopup" role="form">                        
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="saveTerm" data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="editLocationModal"  role="dialog" aria-labelledby="editLocationModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header team">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="editLocationModalLabel">Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="editLocationPopup" role="form">                        
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="saveLocation" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Saving">Save</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="userModal"  role="dialog" aria-labelledby="userModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <form data-toggle="validator" role="form" class="userInfoPopup" >
+                                <div class="form-group">
+                                    <label for="username1" class="control-label">Username</label>
+                                    <input data-minlength="6" type="text" pattern="[A-Za-z0-9-_$*()#@!%/\\.?]+" class="form-control" id="username1" placeholder="Fill in username" required disabled>
+                                    <!--<div class="help-block">Minimum of 6 characters. Valid characters are A-Za-z0-9-_$*()#@!%/.?</div>-->
+
+
+                                </div>
+
+                                <!--                            <div class="form-group">
+                                                                <label for="inputPassword" class="control-label">Password</label>
+                                                                <div class="form-inline row">
+                                                                    <div class="form-group col-sm-6">
+                                                                        <input type="password" data-minlength="6" class="form-control" id="password" placeholder="Password" required>
+                                                                        <div class="help-block">Minimum of 6 characters.</div>
+                                                                    </div>
+                                                                    <div class="form-group col-sm-6">
+                                                                        <input type="password" class="form-control" id="password2" data-match="#password" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+                                                                        <div class="help-block with-errors"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>-->
+
+
+                                <div class="form-group">
+                                    <label for="fullName" class="control-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Fill in your full name" required>
+                                    <div class="help-block">Please enter your full name (use the same one you use in FastCat records)</div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="organization" class="control-label">Organization</label>
+                                    <input type="text" class="form-control" id="organization" placeholder="Fill in organization" required>
+                                    <div class="help-block">Please enter your organization (as written in FastCat templates)</div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="control-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" data-error="Invalid email address!" required>
+                                    <div class="help-block with-errors">Please enter your email (will not be shared publicly)</div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <button id="saveUser" type="submit" class="btn btn-primary" title="Please fill in all fields to activate">Change</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="markAsSameModal"  role="dialog" aria-labelledby="markAsSameModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header team">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="markAsSameModalLabel">Mark as same</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="editMarkAsSamePopup" role="form">                        
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+
+                            <div class="row">
+
+                                <div class="col-sm-12">
+
+                                    <form class="form-inline">
+                                        <div class="form-group hidden" style="margin-right: 5px;">
+
+                                            <label for="percent">Match certainty percentage</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="percent" placeholder="100" min="1" max="100" value="">
+                                                <div class="input-group-addon">%</div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="btn btn-primary" id="saveMarkAsSame" data-dismiss="modal">Save changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 text-left">
+                                    <small> *If you want to correct those terms click on the link.</small>
+
+
+                                    <!--                                    <small>*This term exists also inside a Vocabulary or Instance list. If you add a preferred term to this field and another preferred term 
+                                                                            to the original term inside the vocabulary section or Instance list section, then the later will replace this preferred term when it will 
+                                                                            appear in the Research space.</small>-->
+                                </div>
+                            </div>
+                            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="passwordModal"  role="dialog" aria-labelledby="passwordModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <form data-toggle="validator" role="form" class="passwordPopup" >
+                                <div class="form-group">
+                                    <label for="username2" class="control-label">Username</label>
+                                    <input data-minlength="6" type="text" pattern="[A-Za-z0-9-_$*()#@!%/\\.?]+" class="form-control" id="username2" placeholder="Fill in username" required disabled>
+                                    <!--<div class="help-block">Minimum of 6 characters. Valid characters are A-Za-z0-9-_$*()#@!%/.?</div>-->
+
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password" class="control-label">Password</label>
+                                    <div class="form-inline row">
+                                        <div class="form-group col-sm-6">
+                                            <input type="password" data-minlength="6" class="form-control" id="password" placeholder="Password" required>
+                                            <div class="help-block">Minimum of 6 characters.</div>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <input type="password" class="form-control" id="password2" data-match="#password" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="form-group">
+                                    <button id="savePassword" type="submit" class="btn btn-primary" title="Please fill in all fields to activate">Change</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- REQUIRED JS SCRIPTS -->
+            <!-- jQuery 3 -->
+            <script src="adminLTE/bower_components/jquery/dist/jquery.min.js"></script>
+            <!-- Bootstrap 3.3.7 -->
+            <script src="adminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script src="adminLTE/bower_components/validator.min.js"></script>
+
+            <!-- bootstrap datepicker -->
+            <script src="adminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+            <!-- DataTables -->
+            <script src="adminLTE/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+            <script src="adminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+            <script src="adminLTE/bower_components/datatables.select/dataTables.select.min.js"></script>
+            <script src="adminLTE/bower_components/jquery-datatables-checkboxes-1.2.11/dataTables.checkboxes.min.js"></script>
+
+
+            <script src="adminLTE/bower_components/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>
+            <script src="adminLTE/bower_components/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+            <script src="adminLTE/bower_components/pdfmake-0.1.36/pdfmake.min.js"></script>
+            <script src="adminLTE/bower_components/pdfmake-0.1.36/vfs_fonts.js"></script>
+            <script src="adminLTE/bower_components/JSZip-2.5.0/jszip.min.js"></script>
+
+
+
+
+            <script src="adminLTE/bower_components/moment.min.js"></script>
+            <script src="adminLTE/bower_components/datetime-moment.js"></script>
+
+
+
+            <!-- Select2 -->
+            <script src="adminLTE/bower_components/select2/dist/js/select2.full.min.js"></script>
+
+            <!-- AdminLTE App -->
+            <script src="adminLTE/js/adminlte.min.js"></script>
+            <script src="js/pouchdb-7.0.0.min.js"></script>   
+            <script src="js/pouchdb.find.min.js"></script>
+            <script src="js/pouchdb.replication-stream.min.js"></script>
+            <script src="js/pouchdb.load.min.js"></script>
+            <script src="js/pouch-mirror.min.js"></script>
+            <script src="js/pouchdb.authentication.min.js"></script>
+
+
+            <script src="js/memorystream.js"></script>
+            <script src="js/FileSaver.min.js"></script>
+            <script src="js/global.js"></script>
+            <script src="js/jspath.min.js"></script>
+            <script src="js/messenger.min.js"></script>
+            <!--        <script src="js/messenger-theme-future.js"></script>-->
+
+            <!-- Our own js files-->
+            <script src="js/FastCatCore.js"></script>
+            <script src="js/FastCatTeam.js"></script>
+            <!-- Optionally, you can add Slimscroll and FastClick plugins.
+                 Both of these plugins are recommended to enhance the
+                 user experience. -->
+
+
+    </body>
+</html>

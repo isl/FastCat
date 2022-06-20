@@ -1,0 +1,325 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 27, 2017, 3:19:45 PM
+    Author     : cpetrakis
+*/
+
+
+.template_body{
+    padding: 0px !important;
+}
+
+filter-option{
+    font-size: 14px;
+}
+
+.tooltip-inner {
+    max-width: 500px;
+    white-space:pre;    
+}
+
+.popover.fade.right.in{    
+    max-height: 350px;
+    max-width: 500px;
+    overflow-x: auto;
+    color:grey;
+}
+
+.dropdown-menu{
+    font-size: 12px;
+}
+ .dropdown-toggle{
+    font-size: 12px;
+}
+
+.spin_loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../img/loader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.indexHeader {
+    background-color: #3D8CBC;
+    margin:0px;
+    height:50px;
+    padding-left:20px;
+    padding-top:10px;
+    color:white;
+    font-size:20px;
+    margin-top: -30px;
+}
+
+.logo{
+    height:80%
+    
+}
+
+
+.search_input {
+  background-image: url('./searchicon.png');
+  background-position: 99% 3px;
+  background-repeat: no-repeat;
+  background-size: 18px; 
+  width: 100%;
+  height: 12px;
+  font-size: 12px;
+  padding: 12px 20px 12px 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+
+body {
+  color: #6a6c6f;
+  background-color: #f1f3f6;
+  margin-top: 30px;
+  font-size: 12px; 
+}
+
+.container {
+
+}
+
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 4px 15px;
+  background-color: #347799;
+  color: #fff;
+}
+
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: #347799;
+  color:white;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordion-option {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin: 15px 0;
+}
+
+.accordion-option .title {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-option .toggle-accordion {
+  float: right;
+  font-size: 16px;
+  color: #6a6c6f;
+}
+
+.accordion-option .toggle-accordion:before {
+  content: "Expand All";
+}
+
+.accordion-option .toggle-accordion.active:before {
+  content: "Collapse All";
+}
+.subTableHeader {
+   text-decoration: none !important;
+   height: 21px;
+}
+
+.currentRow {
+  background-color: #E2F9D2 !important;
+}
+
+/*
+
+.handsontableInputHolder
+{
+  z-index: 1000;
+}
+
+.handsontable.autocompleteEditor
+{
+  border: 1px solid #AAAAAA;
+  box-shadow: 10px 10px 15px #AAAAAA;
+  background-color: white;
+  min-width: 200px;
+}
+
+.handsontable.autocompleteEditor.handsontable
+{
+  padding-right: 0px;
+}
+
+.handsontable.listbox .ht_master table
+{
+  border: none;
+}
+
+.autocompleteEditor .wtHolder 
+{
+  min-width: 200px;
+}
+
+
+.autocompleteEditor .htCore
+{
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  min-width: 180px !important;
+}
+
+.autocompleteEditor .ht_clone_top, .autocompleteEditor .ht_clone_left
+{
+  display: none;
+}*/
+
+
+.handsontableInputHolder
+{
+  z-index: 1000 !important;
+}
+
+/* 			Validation								
+.handsontable td.htInvalid    {
+    background-color: #ffbdba!important;  
+}
+
+.handsontable td.htAutocomplete   {
+    background-color:  #fff!important;  
+}
+
+.handsontable td.htAutocomplete.currentRow   {
+    background-color:  #E2F9D2!important; 
+}
+
+
+*/
+.htCommentCell:after {
+    border-top: 6px solid red !important /*was #000*/
+}
+.htCommentTextArea {
+   pointer-events: none; 
+}
+.disabled {
+    pointer-events:none; 
+    opacity:0.6;         
+}
+#recordStatus {
+    color: white;
+    float:right;
+}
+
+
+
+
+
+
+div#page-logos{
+    background-color: #FFFFFF;
+    bottom:0px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div#logos-line-1{
+    background-color:#FFFFFF;
+    text-align: center;        
+}
+div#logos-line-2{
+    background-color: #343839;
+    margin-top:5px; 
+    padding:10px 20px;
+    height: 67px;
+}
+div#logos-line-1 img {
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px 0;
+
+}
+
+div#logos-line-2 img {
+    float: right;
+    width: 400px;
+    margin-right: 10px;
+}
+
+div#logos-line-3{
+    color: #FFFFFF;
+    /*text-align: center;*/
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top:3px; 
+    padding-bottom:3px; 
+    font-size: 13px;   
+    background-color: #343839;    
+
+}
+
+div#logos-line-3 .developedtext{
+    color: #D1D1D1;
+}
+div#logos-line-3 a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div#logos-line-3 a:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div#logos-line-3 a:visited{
+    color: #FFFFFF;
+    text-decoration: none;
+}

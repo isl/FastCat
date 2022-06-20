@@ -1,0 +1,81 @@
+{
+  "Template": {
+    "name": "Archival Corpus",
+    "template_title": "Archival Corpus",
+        "source_language": "English",
+        "organization": "IMS/FORTH",
+        "related_categories":"List of Persons",
+        "record_title":"piou????piou?????",
+    "elements":
+      {
+      "source_identity":{
+      "name":"Archival Corpus",
+      "html_id":"archival_corpus",
+      "use_statement":"Use the source language to fill in the fields of this table",
+      "hot_table": {
+        "nested":"false",
+        "single_row":"true",
+        "source_identity_cols": [
+    {"data": "archive_or_library_name", "type": "text"},
+    {"data": "archive_or_library_location", "type": "dropdown",
+        "source": "JSON.parse(localStorage.getItem('location_gr'))", "vocab": "location_gr"},
+    {"data": "archive_title", "type": "text"},
+    {"data": "archive_institution_history", "renderer": "textRender", "readOnly": "true", "type": "text"},
+    {"data": "series_title", "type": "text"},
+    {"data": "series_quantity", "type": "text"},
+    {"data": "series_type", "type": "text"},
+    {"data": "subseries_title", "type": "text"},
+    {"data": "subseries_quantity", "type": "text"},
+    {"data": "subseries_type", "type": "text"}],
+    "headers":[
+    [ {"label": "", "colspan": "2"}, {"label": "Document", "colspan": "8"}, ""],
+    ["From", "To", "Within", "Registration   Number"]
+    ],
+    "colHeaders":["Name", "Location", "Title", "Institution History", "Title", "Quantity", "Type", "Title", "Quantity", "Type", "Type", "Number", "Number", "Original Title", "Archival Title", "General Abstract", "Source Language", "From", "To", "Within", "Registration   Number"]
+        }
+      }
+      ,
+      
+      "archival_corpus":{
+      "name":"Archival Corpus",
+      "html_id":"archival_corpus",
+      "use_statement":"Use the source language to fill in the fields of this table",
+      "hot_table": {
+        "nested":"false",
+         "single_row":"false",
+        "source_identity_cols": [
+    {"data": "archive_or_library_name", "type": "text"},
+    {"data": "archive_or_library_location", "type": "dropdown",
+        "source": "JSON.parse(localStorage.getItem('location_gr'))", "vocab": "location_gr"},
+    {"data": "archive_title", "type": "text"},
+    {"data": "archive_institution_history", "renderer": "textRender", "readOnly": "true", "type": "text"},
+    {"data": "series_title", "type": "text"},
+    {"data": "series_quantity", "type": "text"},
+    {"data": "series_type", "type": "text"},
+    {"data": "subseries_title", "type": "text"},
+    {"data": "subseries_quantity", "type": "text"},
+    {"data": "subseries_type", "type": "text"},
+    {"data": "component_material_type", "type": "text"},
+    {"data": "component_material_number", "type": "text"},
+    {"data": "document_number", "type": "text"},
+    {"data": "document_original_title", "type": "text"},
+    {"data": "document_archival_title", "type": "text"},
+    {"data": "document_general_abstract"," renderer": "textRender", "readOnly": "true", "type": "text"},
+    {"data": "document_source_language", "type": "text"},
+    {"data": "document_date_from", "type": "date"},
+    {"data": "document_date_to", "type": "date"},
+    {"data": "document_date_within", "type": "date"},
+    {"data": "registration_number", "type": "text"}],
+    "headers":[
+    [{"label": "", "colspan": "2"}, {"label": "", "colspan": "2"}, {"label": "Series", "colspan": "3"}, {"label": "Subseries","colspan": "3"}, {"label": "", "colspan": "2"}, {"label": "Document", "colspan": "8"}, ""],
+    ["Name", "Location", "Title", "Institution History", "Title", "Quantity", "Type", "Title", "Quantity", "Type", "Type", "Number", "Number", "Original Title", "Archival Title", "General Abstract", "Source Language", "From", "To", "Within", "Registration   Number"]
+    ],
+    "colHeaders":["Name", "Location", "Title", "Institution History", "Title", "Quantity", "Type", "Title", "Quantity", "Type", "Type", "Number", "Number", "Original Title", "Archival Title", "General Abstract", "Source Language", "From", "To", "Within", "Registration   Number"],
+    "groups" : [[2, 3], [4, 6], [7, 8]],
+    "group_names" : [["first"], ["second"], ["third"]]
+        }
+      }}
+      
+      
+  }
+}

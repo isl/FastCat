@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Changes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+	    <b>December</b>
+		<p><b>2020-12-15: --------------------------- FastCat System version 2.6 (2020-12-14T16:00) Uploaded to team-----------------------------</b></p>
+
+		<p>2020-12-15: Minor bug fixed to hide  exporting instances modal when record contains no instance</p> 
+		<p>2020-12-04: Changes on Ship List template (Brendan)</p> 
+        <p>2020-12-02: Changes on Inscription Maritime template (Popi)</p> 
+		<p>2020-12-01: Progress bar pseudo succesfull (on private records) bug fixed.</p> 
+	    <b>November</b>
+        <p>2020-11-23: Loader bug on save/export fixed.</p> 
+        <b>October</b>
+        <p>2020-10-16: Moved to HTTPS (at last)! Testing needed.</p> 
+
+        <b>June</b>
+        <p>2020-06-05: Fixed an upload instances issue (\')</p>
+
+        <b>April</b>
+        <p>2020-04-07: vocabularies rules updates for Census Odessa</p>
+
+        <b>March</b>
+        <p>2020-03-30: vocabularies rules updates for Census La Ciotat</p>
+        <p>2020-03-20: instances.json updated with vocabularies rules for Census La Ciotat</p>
+        <p>2020-03-04: instances.json updated with vocabularies rules for 3 templates</p>
+        <p>2020-03-04: Chandlers image resized (thumbs)</p>
+
+        <b>February</b>
+        <p>2020-02-28: Custom uri generator extended for vocabularies </p>
+        <p>2020-02-28: Ship Chandlers data updated</p>
+        <p>2020-02-20: Export vocabularies functionality updated and added collection element</p>
+        <p>2020-02-19: Export vocabularies functionality added in zip file</p>
+        <p>2020-02-17: Code optimization for custom uri generator in common_ptk </p>
+        <p>2020-02-13: Undefined field fixed on xml export, custom uri generators applied from instances.json file on ships </p>
+
+        <b>January</b>
+        <p>2020-01-31: Ship, Legal entities and Location instances xml export mechanism updated like persons </p>
+        <p>2020-01-27: Crew List_IT fixes and Civil Register template updated</p>
+        <p>2020-01-23: Crew List_IT and , Naval Ship and Register templates updated</p>
+        <p>2020-01-22: Added code to create links for hierarchical locations e.g. Ύδρα(island)/Greece(country)</p>
+        <p>2020-01-16: Source type name field added to Civil Register, List of Ships, Seagoing Personnel, Notarial Deeds, Crew List_IT, Naval Ship and Register of Maritime Workers templates and CouchDB</p>
+        <p>2020-01-14: url added to exported persons xml files.</p>
+
+        <h2>2020</h2>
+        <b>December</b>
+        <p>2019-12-09: Added an extra check on Team load for CouchDB (If it fails, notify user and do not let him try to login). .js + .css code removed from ship_map.html and created separate files</p>
+        <p>2019-12-06: ship voyages query  updated to get location instances via new mechanism</p>
+        <p>2019-12-05: money form changed to unit in okeano and saruman in Crew_List_ES </p>
+
+        <p><b>2019-12-03: --------------------------- FastCat System version 2.5 (2019-12-03T17:00) Uploaded to team-----------------------------</b></p>
+
+        <p>2019-12-03: "Year of Registry" added after "Port/Place of Registry" in Ship_List template and typo "End od Service" fixed (brendan mail)</p>
+        <p>2019-12-02: Persons Instances mechanism updated and exports all usages of each instance</p>
+        <b>November</b>
+        <p>2019-11-27: undefined issue fixed in ship voyages. Extra fields added in Sailors_Register and Maritime_Register_ES after jordi request </p>
+        <p>2019-11-26: Merged voyages bug fixed in ship_map.html icons became smaller and word-wrap in pop-up infobox fixed </p>
+        <p>2019-11-21: Fixed international vocabularies (both functionally and visually, i.e. removing commas and making langs and orgs unique in vocabularies table)</p>
+        <p>2019-11-20: Fixed peculiar "undefined" Status bug when saving in Fast Cat. Improved state load mechanism in instances (combos are now updated if there is a value and also clicking All in record combo
+            now actually works). person_Id lowercase fixed (export instances 2 xml).</p>
+        <p>2019-11-19: Added id in recordsCombos at the end (#id), to separate records having the same filename (e.g. Θηρεσία). Fixed a bug that updated wrong rows when 
+            editing a Location</p>
+        <p>2019-11-18: Fixed a bug that prevented adding instances starting with a first letter which did not already exist in DB (aka russian bug)!
+            Instances folder created that contains instances.json file which is responsible for uri generation rules in exported xml files for persons.</p>
+        <p>2019-11-15: Fixed issue with only a few values in corrected/vernacular dropdown. Now showing all values like before. Fixed a preferred modal issue with filters.</p>
+        <p><b>2019-11-14: --------------------------- FastCat System version 2.4 (2019-11-14T18:00) Uploaded to team-----------------------------</b></p>
+
+        <p>2019-11-14: birth_date added to persons instances export</p>
+        <p>2019-11-12: Changed how FastCat loads templates and records to avoid flickering reload effect</p>
+        <p>2019-11-05: Changed "Undo share" mechanism. Now if user clicks "Undo Share" in Fast Cat, record is instantly withdrawn from Team (no need to save).
+            Also fixed a bug, when sharing to Team. Refactored ship_map.html.</p>
+        <p>2019-11-04: Added 2 vocabs in Notarial Deeds template (type_of_act_gr, relation_type_to_other_person_gr). Will have to check _in suffix though.</p>
+        <p>2019-11-01: Added "Split instances" mechanism in Settings screen to easily migrate to our new instances architecture whenever we are ready.</p>
+
+        <b>October</b>
+        <p>2019-10-31: All files (except ship_map.html) refactored 100%. Also, fixed(?) "Preferred terms in two locations" issue.
+            Added  *this will replace the source location name text under Corrected/Vernacular.
+        </p>
+        <p>2019-10-30: Gradually moving towards "Split Instances from 1 to 4 dbs and multiple files per initial letter" mechanism.
+            So far implemented for FastCatTeam.js (except getPreferredInstances()).</p>
+        <p>2019-10-18: Added spinner inside instances table to avoid conflicts.</p>
+        <p>2019-10-16: DataTables load instances mechanism modified to speed things up.</p>
+        <p>2019-10-11: Publish-Unpublish mechanism completed (instances too!)</p> 
+        <p>2019-10-04: export_instances_XML() function added. Publish-Unpublish mechanism now functional (Not publicly available though)!</p>
+        <p>2019-10-03: Google coordinates with comma fix. Notarial deeds filenames were obsolete.</p>
+        <p>2019-10-01: Export to excel bug fixed (Notarial Deeds)</p>		
+        <b>September</b>
+        <p>2019-09-27: "Edit location" mechanism revisited</p>
+        <p>2019-09-16: special chars in coords bug fixed (ship voyages)</p>
+        <p>2019-09-12: undefined route bug fixed in ship voyages. Trying to detect connection problems on login. Fixed a bug with user actions.</p>
+        <p>2019-09-05: Form of money Label changed to Unit in Crew_List_ES template</p>
+        <b>July</b>		
+        <p>2019-07-26: Code added to automatically fill in missing coords when there is a tgn or geonames id</p>
+        <p>2019-07-24: Coordinate fixed on ship map from location instances. Refining-testing "Publish to ResearchSpace" code.</p>
+        <p>2019-07-23: Fixed a bug that broke coords containing quotes (") e.g. [c]avak</p>
+        <p>2019-07-19: Location Instances with coords are shown in Digital Seafaring Tool (updated in Saruman) </p>
+        <p><b>2019-07-15: --------------------------- FastCat System version 2.3 (2019-07-15T19:00) Uploaded to team-----------------------------</b></p>
+        <p>2019-07-12: Footer  added in all templates and Crew_List_ES template added </p>
+        <p>2019-07-11: "uncertain" field export on xml on location instances added. Export to Excel now includes certainty column.</p>
+        <p>2019-07-10: Updated footer. Added location uncertainty mechanism.</p>
+        <p>2019-07-05: Updated Team Manual. Changed official db suffix from "2_1" to ""</p>
+        <p>2019-07-01: Improving Status-mechanisms trying to achieve Korina's scenario 100%. So now when user clicks "Undo published", record status returns to the first non-Published
+            state even if it means deleting multiple Published. Also "Undo publish" is hidden if record is not Published and is shown if it is Published. Also messing about with Maria's 
+            service to actually return a response (e.g. when it fails due to Blazegraph downtime). Adding confirmation dialogs for Publish and Undo Publish.</p>
+
+        <b>June</b>
+        <p>2019-06-28: Relaxed combo-change regular expression to get results always</p> 
+        <p>2019-06-25: "Export to Excel" added to vocabularies too</p>
+        <p>2019-06-21: Added new URLs for downloads and settings pages. Added version check when user starts FastCat and when user logins to Team. 
+            geoId element added to exported location.xml.</p>
+        <p>2019-06-20: Refined geonames mechanism. 'PDF' hidden. 'Excel' renamed to 'Export to Excel'.</p>
+        <p>2019-06-19: Added a 'user login log' mechanism. Added "Ask Geo" service to help user with locations</p>
+        <p>2019-06-18: Added footer to login page to comply with Christos's remarks</p>
+        <p>2019-06-12: Added Export to PDF and Excel buttons (instances tables for now). Separated 'Ask Getty' results by continent. Added type in 'Ask Getty' results. 
+            Changed Getty query (now using Ilias' no2 with one extra order parameter)</p>
+        <p>2019-06-11: Added 'Import to Blazegraph' service call (Not working yet). Locations are now template-ignorant ('6 Barcelona issue'). Fast Cat saves locations without template in key!</p>
+        <p>2019-06-10: Fixed 'messenger staying active after load' issue.</p>
+        <p>2019-06-06: Other_name added to locations instances on xml export</p>
+        <p>2019-06-05: Added a google maps iframe for Getty results. Link to instance/vocabulary term from sameAs modal now works the way we designed it.
+            History replaceState introduced! All instance/vocabulary in sameAs modal are now links. Updated editLocation modal form and locations table.
+            Updated help for locations.</p>
+        <p>2019-06-04: Added "Ask Getty" service to help user with locations. Removed free text for instance/vocabulary fields in sameAs modal. 
+            Keep current page when saving term or location modal. "Preferred terms in two locations" mechanism operational!</p>
+        <p>2019-06-03: Fixed a nasty bug (Preferred term did not work)!. Keep working on "Preferred terms in two locations" task.</p> 
+
+        <b>May</b>
+        <p>2019-05-31: Messageries Maritimes extra day field added</p>
+        <p>2019-05-29: Fixed a registration number-registration folio radio button bug in sameAs form.</p>
+        <p>2019-05-28: Added footer image and GDPR-essential links. Changed Locations table once more. Fixed a Mark as Same modal title bug.
+            Hid free text radio buttons in Mark As Same, if there is not at least one value.</p>
+        <b>2019-05-24: --------------------------- FastCat System version 2.2 (2019-05-24T12:00) Uploaded to team-----------------------------</b>
+        <p>2019-05-24: Revised status mechanism to come closer to Korina's statuses scenario.</p>
+        <p>2019-05-23: Removed 'Entity type' column and changed 'Entity name' to 'Legal entity' in Legal Entities. Added extra column 'Previous name' in Ships.</p>
+        <p>2019-05-22: Added header tooltips (Inscription maritime,List of ships), Various Instance creation bugs fixed</p>
+        <p>2019-05-20: Added 2 new fields to CivilRegister filename (bookYear and topograpgicSignature), Source Identity overflow bug fixed</p> 
+        <p>2019-05-17: "Publish to Research Space" and "Undo publish" functionalities operational (FCdev for now). Only piece missing is the upload to 
+            Blazegraph service and (of course) final mappings.</p>
+        <p>2019-05-16: Various instance collection bug fixes.</p>
+        <p>2019-05-14: Status (Under processing, Ready for publishing) mechanism revised to keep history and extended to allow new states (Published)</p>
+        <p>2019-05-10: Fixed a wrong column issue in ships (registration_list and registration_number. Added modals and autofill code for 2 new templates.</p>
+        <p>2019-05-08: New Templates (Ship_List, Inscription_Maritime) added</p>
+        <p>2019-05-06: Added header tooltips (Maritime_Register_ES, Messageries_Maritimes, Register_of_Ships, Students Register, Maritime_Register)</p>
+
+        <b>April</b>
+
+        <p>2019-04-25: Changed downloads location to work with Team.</p> 
+        <p>2019-04-23: Added header tooltips (Seagoing personnel and Notarial Deeds). Fixed an issue when switching between 'almost' same (case-insensitive) preferred terms (e.g. Archivio di stato di Genova vs Archivio di Stato di genova)
+        <p>2019-04-22: Have started implementing 'Publish to Research Space' functionality</p>
+        <p>2019-04-16: Replaced_by and same_As elements added to exported .zip (instance files)</p>
+        <p>2019-04-15: Export zip (with instances) updated. This functionality is now hidden if record is not Public. Fixed a bug when changing group preferred term.</p>
+        <p>2019-04-09: Added info about database. Downloads is now an entire page.</p>
+        <p>2019-04-08: Export to excel in Naval register fixed (jordi bug).</p>
+        <b>2019-04-04: --------------------------- FastCat System version 2.1 (2019-04-04T17:00) Uploaded to team-----------------------------</b>
+
+        <p>2019-04-04: Changed vocab filters once again (status issue). Improved Mark as same-Mark diff-Add remove pref.</p>
+        <p>2019-04-03: update_Vocs_from_json added in all templates. Fixed a bug concerning vocab new engine and templates with spaces.
+            Removed warning from change status modal. Fixed a bug with multiple same occurences. Limited admin records-vocabs-instances visibility to only
+            shared ones. Changed team manual.</p>
+        <p>2019-04-02: Fixed bugs from Debugging_V3.doc. UploadVocabs engine reimplemented! Fixed a bug with vocabs count badge. Added registration_location
+            to ships.</p>
+        <p>2019-04-01: Fixed a bug with appStatus when changing record status (Athina's undefined.html)</p>
+
+        <b>March</b>
+        <p>2019-03-29: Fixed handle ships function and other bugs in Crew List and Crew List_IT instance collection</p>
+        <p>2019-03-28: Changed how 'Mark as different' works according to new scenarios (Mark as different breaks group and also removes preferred).
+            4 new templates added (Messageries_Maritimes, Maritime_Register_ES, Seagoing_Personnel and Register_of_ships )</p>
+        <p>2019-03-27: Added modals and createFilename for 4 new templates. Hiding instances that have broken position info (deleted records).
+            Fixing 'counting terms' in vocabularies. Hiding second 'List of' in some position infos. Added new html help for vocabularies.</p>
+        <p>2019-03-26: Found and fixed a nasty bug concerning filters (sometimes there were records in the filter, that should not be there). 
+            Fixing repair function. Added a message in case position info modal is empty (part of a sameAs block).</p>
+        <p>2019-03-22: create_related_persons function solves the following: <br>
+            3) Στο Civil register στο επίθετο της μητέρας και του πατέρα όταν εμφανίζεται το σύμβολο & παίρνεις για τον πατέρα το επίθετο Α από το άτομο και για την μητέρα το επίθετο Β από το άτομο.<br>
+            4)	Στην περίπτωση που έχουμε πατέρα παίρνεις το επίθετο του παιδιού για να φτιάξεις instance. To σημειώνω με κόκκινο<br>
+            5)	Στην περίπτωση της μάνας επίσης μπορεί σε ισπανικά αρχεία να χρειαστεί να πάρεις το δεύτερο επίθετο του παιδιού
+            (το σημειώνω με κόκκινο) Αν δεν είναι κόκκινο μάλλον έχει δικό της επίθετο και το φτιάχνεις όπως σε όλα τα άλλα άτομα με τα δικά του πεδία.<br>
+        <p>2019-03-21: Bugs fixed from okeanos Debugging doc file (FC) <br>
+            Auto-clean not used terms added when opening vocabularies. Registration folio merged with number in ships table.
+            Added resetTable button for instances to easily uncheck checkboxes and remove applied filters. Vocabularies terms tooltip revised and approx character
+            altered.</p>
+        <p>2019-03-20: All templates issues fixed (probably). Save checks record status and if its public it collects all instances and vocabularies to upload them on FastCatTeam. Loading modal added on save and xml export<br>
+            Filter fixes (problems when used in multiple records, mixups with Payroll Greek and Russian etc). Also changed the way usages are 
+            calculated to show proper position info icon color. Added ~ inside vocabularies count badge. Changed how usages are stored for locations (groups again)
+        </p>
+        <p>2019-03-18: Position info speed boost! clear_localStorage_instances() function added to make instance collection lighter.
+        <p>2019-03-15: Fixed combos above vocabs and instances (removed duplicates when global vocabs, hid private records and sorted options).
+            Instance creation on Crew List_IT, Payroll_RU, Census_Odessa, Students Register templates fixed (FC)</p>
+        <p>2019-03-14: Hid vovabInfo (orange small letters...). Help texts are now separate. Fixed position info (and color) to only show visible records
+            and not be filtered. Fixed vocabs orgs and numbers.</p>
+        <p>2019-03-13: Added help texts for vocabs and instances. Added Team Manual. Added help texts in some fields (sameAs form). 
+            Instance creation on Logbook,Accountsbook,Crew List, Census La Ciotat,Maritime Workers_IT and Payroll template fixed and vocabularies disappeared from index.html (FC)</p>
+        <b>2019-03-12: --------------------------- FastCat System version 2.0 (2019-03-12T19:00) Uploaded to team-----------------------------</b>
+
+        <p>2019-03-12: Moved team to official domain (http://isl.ics.forth.gr/FastCatTeam). Instance modal now shows all available fields. Messed a bit with
+            state save to preserve current page. Removed mark as different from Locations. Instance occurences are not grouped any more to allow dismatching (have to save
+            to fix). Fixed position info color. Made "Related organization" column visible again...</p>
+        <p>2019-03-07: Compacted dbs. Added maintenance mode. Added columns "Registration folio" and "Registration list" to ships tables.
+            Register of Ships Template added</p> 
+        <p>2019-03-06: Added columns "Type" and "Call signal" to instances tables
+            Added columns "Type" and "Call signal" in instances tables, New templates added (Maritime Register, Messageries Maritimes, Notarial Deeds, Seagoing Personnel), Voyages on Map button added on left menu</p>
+        <p>2019-03-04: Added sorting in position info column to sort based on multiple or not. Changed organizations to legal entities. Dropdowns again...</p>
+        <p>2019-03-01: Experimenting with fixed table headers</p>
+
+        <b>February</b>
+        <p>2019-02-28: Various fixes and changes based on Korina's doc and the meeting in Rethymno</p> 
+        <p>2019-02-26: Trying stateSave (instances table for now). Fixed a bug when logged in user tried to sign up. Fixing vocabs in DB (adding, renaming etc). Hid column "Broader vocabulary category" from vocabs</p>
+        <p>2019-02-25: Improving "MarkAsSame-MarkDiff-Add/Remove preferred" behavior.</p>
+        <p>2019-02-22:Export kml from view Route modal in Logbook, Repair vocabs completed and added as functionality. Getting all usages (lower and upper) for vocabs.
+            Changed term/instance modal colors in Team. Merged Status and Status|Capacity|Role vocabs in Team</p>
+        <p>2019-02-21: Added mark as different for instance occurences (inside position info modal)!. Also an admin action to undo its results :)</p>
+        <p>2019-02-20: Added template in instances key to have different instances per template as designed. Improved MarkAsSame-MarkDiff-Add/Remove preferred
+            (Scenarios 1-2 success!)</p> 
+        <p>2019-02-19: Team View Mode (performance issue) added in nested tables templates (Accounts,Odessa,La Ciotat, Logbook, Maritime Workers/ Registers IT/ES, Payroll and Studets Register)
+            Now the same functionality has to be added in Fastcat (update vocabs must be updated)</p>
+        <p>2019-02-18: Fixed filter bug with scrollbar. Also cleaned db from "percent" junk in ids.</p>
+        <p>2019-02-15: Replaced Datatables responsive plugin with a simple scrollbar. Improving sameAs form. Introduced "Add/Remove preferred term" functionality.
+            Match certainty percentage is now stored.</p>
+        <p>2019-02-14: Introduced "Repair Instance" functionality. Improved "Mark as same".</p>
+        <p>2019-02-13: Hiding empty instances.</p>
+        <p>2019-02-12: Improving "Mark as same". Changed "Edit" button to "Save". Fixing hr between cogs. Dealing with empty spaces in instances.</p>
+        <p>2019-02-11: Removed "Mark as same" from Locations. Added coordinates field in Locations.</p>
+        <p>2019-02-08: First "Mark as same-Mark as different implementation".</p>
+        <p>2019-02-04: Administrative division merged into location instance in Sailors Register template, local_authority vocabulary removed from team</p>
+        <b>January</b>
+        <p>2019-01-23: Fixed a nasty vocabularies bug. Vocabularies and instances are now case insensitive.</p>
+        <p>2019-01-22: Global vocabularies functional at last!</p>
+        <p>2019-01-15: Removed 'Connection to thesaurus' field.</p>
+        <h2>2019</h2>
+        <b>December</b>
+        <p/>
+        <p>2018-12-13: Instance collection from giorgopinakes fixed. </p>
+        <p>2018-12-03: Ship_name vocabularies removed. Fixed a bug with terms tooltip. Added a different badge color when term or instance appears in more than one table...</p>
+        <br/>
+        <br/>
+        <b>November</b>
+        <p/>		
+        <p>2018-12-05: (FastCat) &nbsp bug fixed (probably) from giorgopinakes.</p>
+        <p>2018-11-30: (FastCat) Accountsbook person instances bug fixed (probably), Collect Fathers instances only if they have name (Roll).</p>
+        <p>2018-11-29: (FastCat) Replace birthdate with date_of_birth in instance collection. , Collecting triple instances (ships/persons/organizations) in Accountsbook(Team) Changed tables index in position info. Experimenting on timeout bug.</p>
+        <p>2018-11-27: (Team) Changed vocabulary terms table and "Edit term" modal. "Position info" is now a separate column in instances too.
+            Fixed pink header. Fixed missing location bug in modal. Fully implemented locations table and added 'Edit location' functionality.
+            (FastCat) Students Register "Fields(2): 12,2(όχι 13),14".
+        </p>
+        <p>2018-11-26: (FastCat) Organization instance collection updated and Russian Locations Instance creation is functional now.
+            Removed 31 vocabularies. (Team) Changed download link labels</p>
+        <p>2018-11-22: (FastCat) Replace predefined chars in XML export</p>
+        <p>2018-11-16: (FastCat) Changes in Logbook, Payroll and Accountsbook.</p>
+        <p>2018-11-13: (Team) Added "Edit term" functionality in vocabularies. Also, fixed a serious bug concerning vocabularies.</p>
+        <p>2018-11-09: (Team) Fixed issue showing all of a sudden private records updated in Team. Complete redesign of instances upload
+            mechanism to avoid multiple same instances bug.</p>
+        <p>2018-11-08: (Team) Activated Locations and Organizations instance upload (has a multiplicity bug so far). </p>
+        <p>2018-11-07: (Team) Hiding terms in vocabularies and instances if they belong to private records. </p>
+        <p>2018-11-06: (Team) Signup button changed to link and moved closer to login. "My records" now shows only records, which have as record author 
+            the current user (used to show all records that were created by the same organization)</p>
+
+        <b>October</b>
+        <p/>
+        <p>2018-10-31: Bug fixes concerning vocabs and instances. (Team) Added download Fast Cat functionality.</p> 
+        <p>2018-10-29: (Team) Visuals.</p> 
+        <p>2018-10-26: (Team) Simple users only view public records in All records! Admins view them all. (FastCat) Instances collection added in all records (except Odessa).
+            User may choose whether to publish a record or keep it private.</p>
+        <p>2018-10-25: (FastCat) Instances collection with new format added (only in Crew List_IT for the moment). (Team) Added change user info and change password functionality</p>
+        <p>2018-10-24: (Team) Added signup functionality</p>
+        <p>2018-10-23: (Team) Record instances are now deleted on record deletion. Changed some colors too.</p>
+        <p>2018-10-22: (Team) Instances position info and template-record combos mechanism operational!</p>
+        <p>2018-10-21: (Team) Instances upload has begun (Ships and persons for now)! Will continue working on polishing mechanism and also adding missing functionality in Team 
+            (e.g. make template-record combos work, delete instances when record is deleted, add vocabularies-instances actions). Hid russian Location in vocabularies.</p>
+        <p>2018-10-18: (Team) Instances visuals implemented - Started work on instances upload. Successful save modal and backup functionality added when db crashes. Export zip added in all templates</p>        
+        <p>2018-10-17: Last Modification Date changes only on save. Export zip (with instances) and "safe save" functionality added (only in Ruoli di equipaggio)</p>        
+        <p>2018-10-16: 'Last write wins' implemented for records in FastCat.</p>
+        <p>2018-10-15: Now user may also import json files exported from HOTeditor. Removed batch records replication to couchDB. (Team) Changed "-1" to "..." when calculating vocabularies terms (have to check when connection 
+            speed is low)</p>
+        <p>2018-10-12: (Team)Vocabularies layout from FastCat adjusted for Team. Added extra actions for simple user in 'My records'</p>
+        <p>2018-10-11: (Team)Fixed search bug. Uploading vocabs to CouchDB for the first time!<p>
+        <p>2018-10-05: Hid Location vocabularies (except Russian). Now checking and fixing vocabularies on "Vocabularies" click to show actual number of terms used!</p>
+        <p>2018-10-03: (Team) Record status implemented!</p> 
+
+        <b>September</b>
+        <p/>
+        <p>2018-09-27: (Team) Do not update vocabs in view mode. Proper actions available in 'All records-My records'</p>
+        <p>2018-09-25: (Team) Fixes and extras. 'My Records' is now functional (Once clicked it filters records created by specific organization)!</p>
+        <p>2018-09-21: Reorganized FastCat javascript code to branch Team logic. Created query to fetch all records to 
+            speed things up (x50)...</p>
+        <p>2018-09-04: Started work on FastCat System version 1.4-SNAPSHOT</p>
+
+
+        <b>August</b>
+        <p/>
+        <b>2018-08-22: --------------------------- FastCat System version 1.3 (2018-08-22T15:03) Delivered to users-----------------------------</b>
+        <p>2018-08-21: Hid 'Create new record in new tab' action. Fixed 'selection remains after deletion' bug.</p> 
+        <p>2018-08-09: (FCteam) Added login screen and user authentication</p>
+        <p>2018-08-06: Fixed "undefinedundefinedundefined..." bug in vocabularies.</p>
+
+        <b>July</b>
+        <p/>
+        <p>2018-07-27: Visual enhancements. All records tests</p>
+        <p>2018-07-26: Added new favicon for team. Fixed a bug with Census Odessa template.</p>
+        <p>2018-07-25: Changes made on Crew List (Roll)</p> 
+        <p>2018-07-24: Added "Status" column in All records (team). Deleted Archival Corpus from templates.</p> 
+        <p>2018-07-23: Extra Location info modal in Notarial Deeds and Instance collection in Crew List IT for testing</p>
+        <p>2018-07-17: Started work on Fast Cat Team.</p>
+        <p>2018-07-17: Updated pouchDB to version 7.0.0 (We'll see how it performs). Removed unused columns in terms table.</p>
+        <p>2018-07-03: Added 'in new tab' actions...</p>
+
+        <b>June</b>
+        <p/>
+        <p>2018-06-11: Fixed issue when importing records (you had to reload to view them). Jordi big text bug fixed in Sailors_Register template.</p>
+        <p>2018-06-08: Changes have benn done in all templates (15:39 mail)<br>
+            Changed vocabularies badges according to Korina's wishes.</p>
+        <p>2018-06-05: Replaced loading gif with messenger plugin. Updated reactToChanges mechanism to avoid flashing or filter selection in SpyCat.</p>
+        <p>2018-06-01: Added header tooltips (template Civil Register and Record Information in all templates. Will add rest when I have required
+            documentation)</p>
+
+        <b>May</b>
+        <p/>
+        <p>2018-05-31: Changed way colHeaders are treated to fix Redmine Bug#1186. Remove all not used terms button added in all templates</br>
+        <p>2018-05-30: Extra information (record_title, related_organization, record_id, template_type, source_language) added in xml files</br>
+            Export to xml functionality added to all templates for testing</p>                
+        <p>2018-05-25: Export to xml functionality added to all templates (except Loyd, Maritime_Register,Students_Register) for testing</p>                
+        <p>2018-05-24: Export to xml functionality added to Notatial Deeds and Crew List IT Templates for testing</p>        
+        <b>2018-05-22:------------------------------------------- System Version 1.2  -------------------------------------------------------</b>		
+        <p>2018-05-15: Load Bug fixed (check if there are nested to create them)</p>
+        <p>2018-05-14: Spy Cat.</p>
+        <p>2018-05-07: Records are now replicated to server on save. Updated Logbook with "Mark content external of source" functionality.</p>
+        <p>2018-05-04: Updated Logbook template! It has NOT the "Mark content external of source" functionality<br>
+            Added "Add/View extra Location info" in Notarial Deeds for testing</p>
+        <p>2018-05-03: Added "Mark content external of source" in all templates that use it, except Logbook</p>
+        <p>2018-05-02: Added "Mark content external of source" in Notarial Deeds template and removed it from Austrian Loyd.</p>
+
+        <b>April</b>
+        <p>2018-04-30: Added "Mark content external of source" functionality (for now only in Austrian Loyd template)</p>
+        <p>2018-04-23: Export to excel of multiple (group) tables functionality added in Civil Register template</p>				
+        <p>2018-04-18: Handle vocabulary functions added in fastcat Record Information Tables.<br>
+            Handle vocabulary modal in records when there are no terms at all</p>
+        <b>2018-04-18: ---------------------------- FastCat System version 1.1 (2018-04-18T1808) Delivered to users------------------------------</b>	
+        <p>2018-04-17: Removed 'Add Table' action from context menu, when user clicks header.</p>
+        <p>2018-04-16: Added Archival Corpus template.</p>
+        <p>2018-04-13: Refined backup-import mechanisms. Vocabs updates. Added col number in Field Title field. Changed subtables code once again to make them editable again when 
+            user deletes data and only leaves one line.</p>
+        <p>2018-04-05: Added 3 new templates. Changed subtables once more (due to a hot bug) to fix weird behavior with columns-rows mixups. Changes in templates done (Payroll, Accountsbook,Logbook, Odessa, Payroll_RU, Civil Register,Crew List, Maritime Workers, Students Register, Maritime Register, Roll, Sailors Register, Census La Ciotat, Notarial Deeds)<br>
+            'usage' parameter added in createJson function in order to export valid excel files<br>
+        <p>2018-04-04: Edit on edit bug fixed (probably :o) in edit vocabulary modal.<br>
+            Vocabularies are now clean and tidy<br>
+            Close subtable extreme redesign to simplify code and boost speed (x20 gain). Hope I did not break anything!</p>
+        <p>2018-04-03: Bug fix of special characters in edit vocabularies (Athina's Easter egg bug 1)
+            Double confirm/cancel buttons removed from vocabularies usage popover (Athina's Easter egg bug 2)
+            Vocabulary label added in modal header (when exists ????)
+            New template created (Maritime register). Some minor Korina's changes (mostly table headers). 
+            A bug fix when term contained '.</p>
+        <p>2018-04-02: New Templates created (Sailors_Register & Cencus La Ciotat). 
+            Code optimized to maxify the occurencies of Sam's "fix" (maxify_occurencies function)</p>
+
+        <b>March</b>
+        <p>2018-03-30: Added extra code to delete any vocab term occurences for no longer existing records (e.g. leftovers from previous FastCat versions).
+            Made term modals more compact changing layout slightly.</p>
+        <p>2018-03-29: Changed way subtables work: Now if there are more than one rows in parent table, those specific cells are readonly
+            and you can no longer open subtable by just clicking on parent cells. (You need to right click and select 'Add table')</p>
+        <p>2018-03-28: Introduced an emergency export functionality when records DB is broken beyond repair (rare but possible occasion).
+            Changes in templates [Payroll, Accountsbook, Logbook, Payroll_RU, Census_Odessa, Students_Register, Roll, Notarial Deeds].</p>
+        <p>2018-03-22: Performance update done, it does not save nulls or undefinded values on json so the final json file is much smaller.<br>
+            Bug fixes in edit Vocabulary Modal (it does user's changes onclick of Accept Changes button only) so btn Apply Changes maybe must be renamed <br>
+            Show Route of Ship in Logbook added but it's TOP SECRET and hidden</p>
+        <p>2018-03-21: Some changes in edit Vocabulary Modal (save button, edit_used_Voc & remove_used_Voc) in order to avoid miraculous problems (πλοία πλοία πλοίά, γαρ. γαρμπής)</p>
+        <p>2018-03-21: Changes in Templates (Payroll, Accountsbook, Logbook, Census, Payroll_RU) done.. </p>
+        <p>2018-03-20: Changed entire "Get Column Title" mechanism. Should work without a hitch now...</p>
+        <p>2018-03-16: Fixed problem with vocabs when offline (Kalliopi issue). Fixed records combo missing "All" issue.
+            Fixed "undefined" field title issue (at least partly). Added extra checks in vocabulary combos.</p>
+        <p>2018-03-15: Vocabulary screen improvements (When user selects a template, only selected template records are shown in 
+            records combo - Hide info badge for not used terms - Show repeated related organization only one time - Always show
+            template selection combo even if there is only one choice)</p>
+        <p>2018-03-14: Complete redesign on how to create subtable and fill it with data. Super fast, but requires testing!</p> 
+        <p>2018-03-13: Updated edit Vocabulary Modal (usage popover added), 'Remove Row' functionality added when it's safe </p>
+        <p>2018-03-13: Updated updateVocabs function (Sam performance fix)</p>
+        <p>2018-03-09: Changed two column headers in vocabs table. Gave access to location type vocabs (vocabularies plus an
+            extra 'Additional Information' column)</p>
+        <p>2018-03-08: Added extra code to prevent user from closing a subtable before having loaded its data, thus leading to data loss.</p>
+        <p>2018-03-06: Updated pouchDB used from 6.3.4 to 6.4.3. Removed 'Template Group Title' column from templates and records table.</p>
+        <p>2018-03-05: Updated edit vocabulary functionality in all templates :O</p>
+        <p>2018-03-05: Fixed an issue when accidentally trying to import a vocabulary export file to your records (constant FastCat refresh!)
+            Added alert messages in many error cases that so far only reported error in console (to improve usability and bug reporting).</p>
+        <p>2018-03-02: Terms combos for templates and records are now functional!</p>
+        <p>2018-03-01: Handled "user replaced a term without deleting it and old term usage is not removed" bug. (piou bug)</p>
+
+
+        <b>February</b>
+        <b>2018-02-29: ---------------------------- FastCat System version 1.1-SNAPSHOT (2018-02-28T1731) Delivered to users------------------------------</b>
+        <p>2018-02-28: Added error message when user has incognito mode on or browser history off (Martin-Mikaela bug).
+            Added localstorage-pouchDB vocab file comparison to add/remove unused terms.
+            Added tableVariable info in json.</p>
+        <p>2018-02-27: Changed vocab table columns. Fixed a bug with term link. Changed from col number to row number.
+            Changed badge alignment and added tooltip. Added vocab status column (Used-Not used).
+            Changed record link (term modal) to open in new tab. Changed row number to start from 1 instead of 0.
+            Added actual table name in term modal (Needs testing). Added export vocabulary functionality.</p>
+        <p>2018-02-26: Fixed a bug when loading vocabularies table directly from URL. 
+            Added updateVocabs code in remaining templates (Payroll, Census Odessa, Students Register, Accounts book, Austrian Loyd, Crew List_IT,
+            Logbook, Maritime Workers_IT, Notarial Deeds, Civil Register, Payroll_RU). Time to test!</p>
+        <p>2018-02-23: Updated vocabs code (addressed group tables, delete and reset issues). Added updateVocabs code in Crew List (Roll) for starters...</p>
+        <p>2018-02-14: Fixed author names surnames mix when multiple (aka wedding bug. Bad date choice to fix it though...). </p>
+        <p>2018-02-13: Added an alert message to inform user if something crashed on loading record, so that data loss is prevented (Erica bug).  "Remove Row" feature removed from context menu in all tables with multiple rows in order to avoid Erica's bug.</p>
+        <b>January</b>
+        <p/>
+        <b>2018-01-12: ---------------------------- FastCat System version 1.0 (2018-01-15T1720) Delivered to users------------------------------</b>
+        <h2>2018</h2>
+    </body>
+</html>

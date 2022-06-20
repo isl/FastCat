@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title id="title"></title>
+        <link rel="shortcut icon" href='../img/fav.png' type="image/x-icon" />
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/jansy-bootstrap.css"/>
+        <link rel="stylesheet" href="../css/page.css"/>
+        <!--<link rel="stylesheet" href="../css/awesome-bootstrap-checkbox.css"/> -->
+
+
+        <link type="text/css" rel="stylesheet" href="../handsonpro/handsontable.full.min.css">
+        <link type="text/css" rel="stylesheet" href="../handsonpro/font-awesome.min.css">
+
+        <script src="../js/jQuery-2.1.4.min.js"></script> 
+        <script src="../handsonpro/handsontable.full.js"></script> 
+        <script src="../handsonpro/handsontable-chosen-editor.js"></script> 
+
+        <script src="../js/bootstrap.min.js"></script> 
+        <script src="../js/jansy-bootstrap.js"></script> 
+
+        <script src="../js/pouchdb-7.0.0.min.js"></script>   
+        <script src="../js/global.js"></script> 
+
+        <script src="../js/FileSaver.min.js"></script> 
+        <script src="../js/jszip.js"></script> 
+        <script src="../js/jspath.min.js"></script>    
+
+
+
+    </head>
+    <body class="template_body">
+        <div class="indexHeader">   
+            <a style="margin-top: 3px; text-decoration: none; color:#ffffff;"  class="" aria-hidden="true" href="../index.html?table=records"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <img class="logo" src= "../img/logofastcat.png" alt="">                         
+            <a data-toggle="savetooltip"  data-loading-text="<i class='fa fa-spinner fa-spin '></i> " title="Save File" id="create" style="margin-top: 3px; text-decoration: none; cursor:pointer; font-size:18px; padding-top:3px; color:#fff;  padding-right: 25px;" class="spinner glyphicon glyphicon-floppy-disk pull-right"></a> 
+
+            <div class="btn-group pull-right">
+                <button style='margin-right:5px; color:#ffffff; background-color:#3d8cbc; ' type="button" class="btn dropdown-toggle action" data-toggle="dropdown" aria-haspopup="true" >
+                    <span style='font-size: 18px;' class="glyphicon glyphicon-cog" aria-hidden="true"></span> 
+                    <span class="caret"></span></button><ul class="dropdown-menu">
+                    <li>
+                        <a style='cursor: pointer;' id='excelexport'>Export to Excel</a>             
+                    </li>
+                    <li>
+                        <a   title="Custom Export" id="xml_export">Export to XML</a>                                 
+                    </li> 
+                    <li>
+                        <a id="zip_export">Export zip (with instances)</a>                                 
+                    </li> 
+
+                    <!--    <li>
+                        <a   title="Custom Export" id="custom_excel">Custom Excel Export</a>                                 
+                        </li> -->
+                </ul>
+            </div>     
+        </div> 
+
+        <div class="spin_loader"></div>  
+        <div style="width:100%; background-color: #f1f3f6;" class="container panel panel-default">
+            <div class="accordion-option" style="padding:10px; background-color: #153544">
+                <div>  
+                    <h3 id="unique_filename" style="color:white;" class="title">PayRoll Book</h3> 
+
+                    <!--   <a data-toggle="savetooltip" title="Save File" id="create" style="padding-top:3px; color:#fff; font-size:16px" class="pull-right glyphicon glyphicon-floppy-disk"></a>
+                       <a data-toggle="savetooltip" title="Load File" id="loadfile" style="display:none; padding-top:3px; padding-right:8px; color:#fff; font-size:16px" class="pull-right glyphicon glyphicon-open"></a>      
+                       <a href="../index.html" title="Home" style="padding-top:3px;padding-right:8px; color:#fff; font-size:16px" class="pull-right glyphicon glyphicon-home"></a>
+                    -->
+                    <div>
+                        <a data-toggle="tooltipdown" title="Download Json File" class="glyphicon glyphicon-save pull-right" download="file.json" id="downloadlink" style="padding-right:5px;  padding-top:3px; font-size:16px; color:#fff !important; display: none"></a>                       
+                        <a data-toggle="tooltipdown" title="Download Json File" class="glyphicon glyphicon-save pull-right" download="file.json" id="download_on_save" style="padding-right:5px;  padding-top:3px; font-size:16px; color:#fff !important; display: none"></a>                       
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="clearfix"></div>
+            <!-- id="accordion" -->
+            <div class="panel-group"   role="tablist" >
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                FastCat Record Information
+                            </a>
+                        </h4>                                                
+                    </div>
+                    <div style="padding-top:6px;" id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">                                              
+                        <span style=" color:#163758; margin-top:-10px; padding:16px;font-size: 11px">Use english to fill in the fields of this table</span>
+                        <div style="/*overflow:initial; height: 150px;*/ width: 100%;">
+                            <div id="catalogue_info" class="hot handsontable htRowHeaders htColumnHeaders" style=" margin:5px 0px 12px 17px" ></div>  
+                        </div>
+                    </div>
+                </div>              
+
+
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">                           
+
+
+                            <a id='table_name' class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">                                
+
+                            </a>                            
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                        <div style="padding-top:6px;"  class="panel-body"> 
+                            <span id='table_note' style=" color:#163758; padding:0px;font-size: 11px">Use the source language to fill in the fields of this table</span>
+                            <div id="old_id" class="hot handsontable htRowHeaders htColumnHeaders" style="height: 440px; overflow: hidden; width: 100%; margin:5px 0px 0px 4px;"></div>                            
+                        </div>
+                    </div>
+                </div>
+                <!-- ******************************************************** -->
+                <div id='insert_here' style='height:540px;' class="panel panel-default">             
+                </div>
+
+
+
+            </div>
+            <footer class="main-footer" style='margin-left:0px;'>                
+                <div id="page-logos">
+                    <div id="logos-line-3" style="font-size: 12px;">
+                        <a target="_blank" href="../help/termsOfUse.html" title="Terms of Use">Terms of Use</a>
+                        | 
+                        <a target="_blank" href="../help/privacyPolicy.html" title="Privacy Policy"> Privacy Policy</a>
+                        | © 2019<span id="untilYear"></span>
+                        <script language="javascript" type="text/javascript"> var d = new Date();
+                            if (d.getFullYear() == 2019) {
+                                document.getElementById("untilYear").innerHTML = ('');
+                            } else {
+                                document.getElementById("untilYear").innerHTML = ('- ' + d.getFullYear() + ' ');
+                            }
+                        </script>
+                        <a target="_blank" href="http://www.ics.forth.gr/isl/cci.html">FORTH-ICS CCI</a>
+                        <a class="pull-right" href="../changes/changes.htm" id="version" target="_blank">System version 2.3-SNAPSHOT (2019-07-10T15:00) --- Database: Dev(_dev)</a>
+                    </div>
+                    <div id="logos-line-1" class="row">
+
+                    </div>
+                    <div id="logos-line-2">
+                        <a target="_blank" href="https://www.ics.forth.gr/isl/index_main.php?l=e&amp;c=252"><img src="../img/Logos_ICS_ISL_CCi_White_TransparentBack.png" title="Foundation for Research and Technology (FORTH) | Institute of Computer Science | Centre for Cultural Informatics"></a>
+                    </div>
+                </div>
+            </footer> 
+        </div>
+
+        <!-- _______________________________________________________________________ -->        
+
+        <!--                Upload File MOdal                               -->        
+        <div  class="modal fade" id="text_Modal" role="dialog">
+            <div class="modal-dialog">    
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:12px;font-size: 18px;background-color: #153544; color:#fff;">
+                        Upload File
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="text_modtitle" class="modal-title"></h4>
+                    </div> 
+
+                    <div class="modal-body">Only .json format is valid to upload.<br/>
+                        <div style="margin-bottom: 10px;" id="text_wraper">
+                            <div>
+
+                                <div style="margin-top:15px;" class="fileinput fileinput-new" data-provides="fileinput">
+                                    <span class="btn btn-default btn-file">
+                                        <span>Select file</span>
+                                        <input id="selectFiles" type="file"/>
+                                    </span>
+                                    <span class="fileinput-filename"></span>
+                                    <span class="fileinput-new">No file chosen</span>
+                                </div><br/>                          
+                                <button style="width:85px; border:lightgray;" class="btn" id="import">Upload</button>
+                                <textarea style="display: none" id="result"></textarea>
+
+                                <!--   <input id="selectFiles" type="file"  value="Import" /><br/>  -->     
+                            </div> 
+                        </div>                
+                    </div> 
+                    <div id="expand_list_footer" class="modal-footer">
+                        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                        <!-- <button type="button" class="btn btn-primary">Insert selected entries to visualizer</button>-->
+                    </div>                      
+                </div>     
+            </div>
+        </div>
+        <!--_________________________________________________________________-->
+        <!--                 Vocabularies Modal                              -->        
+        <!--                 Vocabularies Modal                              -->        
+        <div  class="modal fade" id="edit_vocabulary_Modal" role="dialog">
+            <div class="modal-dialog" style="width:70%;">    
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:12px;font-size: 18px;background-color: #153544; color:#fff;">
+                        Edit Vocabulary Terms : <span id="modal_title"></span>
+                        <button style="color:#ffffff;" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <span style='margin: -2px 10px 0px 0px;' class='grey-tooltip pull-right' data-placement='bottom' data-toggle='tooltip' 
+                              title="
+                              This is the list of all the terms that belong to the same kind of 
+                              vocabulary, that belong to the same source language, and are used in 
+                              the Fast Cat records of “My Records” section.
+
+                              Terms that are used only in this specific record are  indicated in blue. 
+
+                              Terms that are used in this, but also in other records are indicated in black
+                              and have a ‘Delete’ and ‘Edit’ button next to them.
+
+                              Deleting and editing applies only to this record and any other records that use
+                              the same term will not be affected. 
+
+                              Terms that are used only in other records are also indicated in black  but 
+                              they don’t have a ’Delete’ and ‘Edit’ button next to them. They cannot be 
+                              deleted or edited here. 
+
+                              Terms that are not used in any record appear in the separate table 
+                              below.
+
+                              ">
+                            <i class=" fa fa-question-circle"></i>
+                        </span>
+                        <h4 class="modal-title"></h4>
+                    </div> 
+                    <div class="modal-body">
+                        <div style="margin-bottom: 10px;" >
+                            <div>                               
+                                <div style="max-height: 700px;"> 
+                                    <input  class="search_input" type="text" id="used_search_input" onkeyup="filter_Voc_table('used_search_input', 'searchable_table')" placeholder="Search for used terms..">
+                                    <div style="padding: 5px; font-size:12px; font-weight: bold; background-color: #153544; color:#ffffff">Used terms <span style="font-size: 11px;">* (Only terms used in this Record can be deleted or edited)</span></div>
+                                    <div  style=" overflow: auto; max-height: 250px; margin: 0px 0px 17px 0px;" >
+                                        <table id='searchable_table' class="table table-bordered ">
+                                            <thead></thead>
+                                            <tbody id='vocabylary_terms'></tbody>
+                                        </table>
+                                    </div>
+                                    <div>  <span id='add_new_term'></span><br><br></div>
+                                    <input class="search_input" type="text" id="not_used_search_input" onkeyup="filter_Voc_table('not_used_search_input', 'searchable_table_not_used')" placeholder="Search for not used terms..">                                                                      
+                                    <div style="padding: 5px; font-size:12px; font-weight: bold; background-color: #153544; color:#ffffff">Not used terms</div>
+                                    <div  style="  overflow: auto;max-height: 250px; margin: 0px 0px 17px 0px;">
+                                        <table id='searchable_table_not_used' class="table table-bordered ">                                            
+                                            <thead>
+                                            </thead>
+                                            <tbody id='not_used_vocabylary_terms'></tbody>
+                                        </table>
+                                    </div> 
+                                    <button style='margin:-20px 0px 10px 0px;' class='btn btn-xs btn-outline-secondary' id='remove_all_not_used'>Remove All not used Terms</button>
+                                </div> 
+                            </div>     
+                            <div id="button_save"></div>
+                        </div> 
+                        <div style='border-top-color: #ffffff;' class="modal-footer">                                      
+                        </div>                      
+                    </div>     
+                </div>
+            </div>
+        </div>   
+        <!-- ______________________________________________________________ -->
+        <!--                Comment Modal                              -->        
+        <div  class="modal fade" id="comment_Modal" role="dialog">
+            <div class="modal-dialog">    
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:12px;font-size: 18px;background-color: #153544; color:#fff;">
+                        Mark content external of source
+                        <button style="color:#ffffff;" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div> 
+
+                    <div class="modal-body">
+                        <div style="margin-bottom: 10px;" >
+                            <div>   
+                                <div id='comment_here' style="max-height: 600px; overflow-x: auto;">
+                                    <div class="form-group">
+                                        <label for="comment">Comment:</label>
+                                        <textarea style='height:50px;' class="form-control" id="comment_area"></textarea>
+                                    </div>
+                                </div>
+                                <div id='related_here' style="max-height: 600px; overflow-x: auto;">
+                                    <div class="form-group">
+                                        <label for="comment">Related source:</label>
+                                        <textarea style='height:50px;' class="form-control" id="related_area"></textarea>
+                                    </div>
+                                </div>
+                                <button class="btn " id="save_comment">Save</button> 
+                                <button class="btn " id="cancel_comment">Cancel</button>  
+                            </div> 
+                        </div>                
+                    </div> 
+                </div>     
+            </div>
+        </div>
+        <!--                Big Text Modal                              -->        
+        <div  class="modal fade" id="textArea_Modal" role="dialog">
+            <div class="modal-dialog">    
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:12px;font-size: 18px;background-color: #153544; color:#fff;">
+                        Text Area
+                        <button style="color:#ffffff;" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div> 
+
+                    <div class="modal-body">                       
+                        <div style="margin-bottom: 10px;" >
+                            <div>   
+                                <div id='txt_here' style="max-height: 600px; overflow-x: auto;">
+                                    <div class="form-group">
+                                        <label for="comment">Note:</label>
+                                        <textarea style='height:500px;' class="form-control" id="note_area"></textarea>
+                                    </div>
+                                </div>
+                                <button class="btn " id="save_text">Submit</button> 
+                                <button class="btn " id="cancel_text">Cancel</button>  
+                            </div> 
+                        </div>                
+                    </div> 
+                    <div id="expand_list_footer0" class="modal-footer">                       
+                    </div>                      
+                </div>     
+            </div>
+        </div>
+        
+        <!--                       Safe Save Modal                             -->
+        <div  class="modal fade" id="successful_save" role="dialog">
+            <div class="modal-dialog">    
+
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:12px;font-size: 18px;background-color: #153544; color:#fff;">                        
+                        <button style="color:#ffffff;" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div> 
+                    <div class="modal-body">                       
+                        <div style="margin-bottom: 10px;" >
+                            <div>   
+                                <div style="max-height: 600px; overflow-x: auto;">                                   
+                                    <div class="text-center" style="font-size: 16px;">Record successfully saved !</div>                                                                                                                                                                             
+                                </div>                                
+                            </div> 
+                        </div>                                                  
+                    </div>                      
+                </div>     
+            </div>
+        </div> 
+        <!-- ______________________________________________________________ -->                    
+        <div  class="modal fade in" id="exporting_modal" role="dialog">
+            <div class="modal-dialog">    
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:12px;font-size: 18px;background-color: #153544; color:#fff;">                        
+                        <button style="color:#ffffff;" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div> 
+                    <div class="modal-body">                       
+                        <div style="margin-bottom: 10px;" >
+                            <div>   
+                                <div style="max-height: 600px; overflow-x: auto;"> 
+                                    <div class="text-center" style="font-size: 16px;">Exporting Instances.. Please wait!</div> 
+                                    <div style="padding: 8px; text-align: -webkit-center;"><img class="logo" src= "../img/loader.gif" alt=""></div>                                   
+                                </div>                                
+                            </div> 
+                        </div>                                                  
+                    </div>                      
+                </div>     
+            </div>
+        </div>
+
+
+        <script src="../js/tables_common_ptk.js"></script>     
+        <script src="../js/tables_common_sam.js"></script>   
+        <script src="js/Tables.js"></script>     
+        <script src="js/Editor.js"></script> 
+
+        <script src="../js/jquery.hotkeys.js"></script>
+        <script src="../js/alasql.min.js"></script> 
+        <script src="../js/xlsx0.7.12.core.min.js"></script> 
+
+
+
+        <!-- <script src="js/Payroll_export_import.js"></script>  -->
+
+    </body>
+</html>
+

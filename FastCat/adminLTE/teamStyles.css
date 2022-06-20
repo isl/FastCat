@@ -1,0 +1,160 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 7, 2017, 8:20:10 PM
+    Author     : samarita
+*/
+
+
+.locationsBox,.personsBox,.organizationsBox,.shipsBox {
+    display:none;
+}
+
+.skin-blue-light .sidebar-menu>li:hover>a, .skin-blue-light .sidebar-menu>li.active>a{
+    background-color: #F7E2D5;
+}
+.recordsBox {
+    display: block;
+}
+.vocabInfo, h1>a, .term, .instance {
+    color: #C64F1A;
+}
+
+h1>a:hover, .term:hover , .instance:hover {
+    color: #682A17;
+}
+.term:active, .term:visited,.instance:active, .instance:visited {
+    /*    color: #682A17; */
+    color: #C64F1A;
+
+}
+tbody>tr:hover,  td:hover, tr.selected {
+    background-color: #F7E2D5 !important;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #C64F1A !important;
+    color: white;
+}
+
+.termTable thead {
+    background-color: #682A17;
+    /*color: white;*/
+
+}
+.ribbon {
+    background-color: #C64F1A;
+    /*    color: white;
+        margin:0;
+        padding: 5px 0 5px 0;*/
+}
+
+/* Login */
+.loginButtons, .loginButtons:hover, .loginButtons:active, .loginButtons:visited, .user-header, #createUser, #saveUser, #savePassword {
+    background-color: #C64F1A !important;
+
+}
+.main-header, .navbar, a.logo {    
+    background-color:#C64F1A !important;
+}
+.user-header {
+    height: 80px !important;
+}
+.user-body {
+    border: 1px solid #C64F1A !important;
+}
+
+.sidebar-toggle:hover {
+    background-color: #682A17 !important;
+    /*background-color: #F7E2D5 !important;*/
+
+}
+.sameMark, .diffOcc, .resetTable, .dt-button {
+    color:white;
+    background-color: #C64F1A;
+    height: 40px;
+}
+.diffOcc {
+    height: auto;
+}
+
+.modal-header.team, #saveMarkAsSame, #saveLocation, #saveTerm, #setStatus, #askGetty , #askGeo {
+    background-color: #C64F1A;
+
+}
+#askGeo {
+    margin-left: 5px;
+}
+#teamHtml, #loginHtml {
+    visibility: hidden;
+}
+td {
+    padding:1px !important;
+}
+.btn-circle {
+    background-color: #777;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding:  0;
+    font-size: 12px;
+    /*    line-height: 1.428571429;*/
+    border-radius: 10px;
+}
+.badge::before {
+    content: "≈ ";
+}
+.bg-sam {
+    color: white;
+    background-color: #C64F1A;
+}
+a.downloadLink {
+    color: black;
+}
+/*.versionBlock {
+    margin-bottom:5px;
+}*/
+.versionBlock>p {
+    margin-bottom:5px;
+}
+.locationCertaintyBlock {
+    margin-bottom: 5px;
+}
+/*.content-wrapper {
+    min-height: 500px !important;
+}*/
+@media (max-width: 991px){
+    .content-wrapper {
+        min-height: 500px !important;
+    }
+
+}
+.loading {
+    opacity:0.2;
+    /*background-color:pink !important;*/
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #C64F1A;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
