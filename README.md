@@ -137,7 +137,24 @@ To create a new template the following steps must be followed:
 2. Database
 
    Add the new template to the database: 
-   * Go to templates directory and copy the JSON of one existing template
+   * Go to templates directory and copy the JSON of one existing template eg: 
+   ```json
+          {
+          "_id": "Accounts book",
+          "_rev": "24-2bc1faca593f4c74e7a707eb2cccdc15",
+          "keywords": "Accounts book",
+          "sourceLanguage": "Greek",
+          "title": "Accounts book",
+          "organization": "FORTH/IMS",
+          "vocabularies": [
+            {
+              "id": "collection_gr",
+              "label": "Collection",
+              "broader": "-"
+            }
+          ]
+        }
+     ```
    * Return to templates directory and create a new document 
    * Paste the json you copied before
    * Delete the "_rev" row and change the "_id" value to be exactly the same as the name of the new template <template_name>
