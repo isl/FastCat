@@ -140,7 +140,11 @@ To create a new template the following steps must be followed:
    * Go to templates directory and copy one existing template
    * Return to templates directory and Create Document
    * Paste the json you copied before
-   * delete the "_rev" row and change the "_id" value to be exactly the same as the name of the new template
+   * Delete the "_rev" row and change the "_id" value to be exactly the same as the name of the new template
+
+**Removing a template**
+
+Το remove a template, just delete the corresponding entry from the templates directory in the database.
 
 ## Contact ##
 
