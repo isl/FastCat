@@ -2,14 +2,14 @@
 
 
 ## System Description ##
-
+ 
 FastCat is a Web-based system designed for historians and other researchers who need to manually digitize
 structured and semi structured archival documents in a fast and accurate way to create their research
 dataset. It combines the ease of use and quick data entry functions of the classic spreadsheet with the
 information accuracy typically associated with a complex database. It does so by offering data entry
 templates designed to mirror, in the digital space, the structure and data entry logic of the original source. 
 
-In FastCat, archival documents are transcribed as ‘records’ belonging to specific ‘templates’, where a ‘template’ represents the structure of a single typoe of archival source. A record organizes the data and metadata in tables, offering functionalities like nesting tables and selection of term from a vocabulary.
+In FastCat, archival documents are transcribed as ‘records’ belonging to specific ‘templates’, where a ‘template’ represents the structure of a single type of archival source. A record organizes the data and metadata in tables, offering functionalities like nesting tables and selection of term from a vocabulary.
 The system runs locally inside any modern web browser with possibility of automated synchronisation with an online database. 
 
 
@@ -33,10 +33,11 @@ ACM Journal on Computing and Cultural Heritage, 2021.
 
 **Manuals**
 
-- Instuctions on how to use FastCat: [FastCat User Guide](https://isl.ics.forth.gr/FastCatTeam/Manual.pdf)
+- Instructions on how to use FastCat: [FastCat User Guide](https://isl.ics.forth.gr/FastCatTeam/Manual.pdf)
 
-- Instuctions on how to use FastCat Team: [FastCat Team User Guide](https://isl.ics.forth.gr/FastCatTeam/Manual%20Fast%20Cat%20Team_Version%202.1.pdf)
+- Instructions on how to use FastCat Team: [FastCat Team User Guide](https://isl.ics.forth.gr/FastCatTeam/Manual%20Fast%20Cat%20Team_Version%202.1.pdf)
 
+## Getting Started
 
 ### Built With
 
@@ -44,9 +45,6 @@ ACM Journal on Computing and Cultural Heritage, 2021.
 * [Bootstrap](https://getbootstrap.com/)
 * [handsontable](https://handsontable.com/)
 * [CouchDB](https://couchdb.apache.org/)
-
-
-## Getting Started
 
 ### Dependency
 
@@ -115,7 +113,7 @@ To configure/create a new Template the following steps must be followed:
    * Go to templates directory and copy one existing template
    * Return to templates directory and Create Document
    * Paste the json you copied before
-   * delete the "_rev" row and change the "_id" value to be excact the same with the name of the new template
+   * delete the "_rev" row and change the "_id" value to be exactly the same as the name of the new template
 
 ## Contact ##
 
