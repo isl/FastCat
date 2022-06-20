@@ -8,8 +8,6 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../css/jansy-bootstrap.css"/>
         <link rel="stylesheet" href="../css/page.css"/>
-        <!--<link rel="stylesheet" href="../css/awesome-bootstrap-checkbox.css"/> -->
-        
                 
         <link type="text/css" rel="stylesheet" href="../handsonpro/handsontable.full.min.css">
         <link type="text/css" rel="stylesheet" href="../handsonpro/font-awesome.min.css">
@@ -51,9 +49,7 @@
                         <a id="zip_export">Export zip (with instances)</a>                                 
                     </li> 
             
-        <!--    <li>
-            <a   title="Custom Export" id="custom_excel">Custom Excel Export</a>                                 
-            </li> -->
+
          </ul>
  </div>     
          </div> 
@@ -63,11 +59,6 @@
             <div class="accordion-option" style="padding:10px; background-color: #153544">
                 <div>  
                     <h3 id="unique_filename" style="color:white;" class="title">PayRoll Book</h3> 
-
-                    <!--   <a data-toggle="savetooltip" title="Save File" id="create" style="padding-top:3px; color:#fff; font-size:16px" class="pull-right glyphicon glyphicon-floppy-disk"></a>
-                       <a data-toggle="savetooltip" title="Load File" id="loadfile" style="display:none; padding-top:3px; padding-right:8px; color:#fff; font-size:16px" class="pull-right glyphicon glyphicon-open"></a>      
-                       <a href="../index.html" title="Home" style="padding-top:3px;padding-right:8px; color:#fff; font-size:16px" class="pull-right glyphicon glyphicon-home"></a>
-                    -->
                     <div>
                         <a data-toggle="tooltipdown" title="Download Json File" class="glyphicon glyphicon-save pull-right" download="file.json" id="downloadlink" style="padding-right:5px;  padding-top:3px; font-size:16px; color:#fff !important; display: none"></a>                       
                         <a data-toggle="tooltipdown" title="Download Json File" class="glyphicon glyphicon-save pull-right" download="file.json" id="download_on_save" style="padding-right:5px;  padding-top:3px; font-size:16px; color:#fff !important; display: none"></a>                       
@@ -94,22 +85,7 @@
                         </div>
                     </div>
                 </div>              
-
-<!--
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">                          
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                Source Identity
-                            </a>                            
-                        </h4>
-                    </div>
-                    <div style="padding-top:6px;"  id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                       <span style=" color:#163758; margin-top:-10px; padding:16px;font-size: 11px">Use the source language to fill in the fields of this table</span>                       
-                       <div  id="source_identity" class="hot handsontable htRowHeaders htColumnHeaders" style="margin:17px;" ></div>                        
-                  </div>
-                </div> -->
-                
+		    
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">                          
@@ -367,46 +343,6 @@ below.
                 </div>     
             </div>
         </div>
-<!--_CUSTOM EXCEL MODAL__________________-->          
-<!--<div  class="modal fade" id="custom_excel_Modal" role="dialog">
-    <div class="modal-dialog">          
-        <div class="modal-content">
-            <div class="modal-header" style="padding:12px;font-size: 18px;background-color: #153544; color:#fff;">
-                Select Column(s) to export
-                <button style="color:#ffffff;" type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"></h4>
-            </div> 
-
-            <div class="modal-body">
-                <div style="margin-bottom: 10px;" >
-                    <div  id='insert_checkboxes' >           
-                        <div> 
-                            <div class='panel panel-default'>
-                                <div style ='padding: 3px 0px 3px 11px; font-size:16px; background-color: #153544; color:#fff; ' id='heading_tabels_column'>                                                             
-                                    Tables Columns                                                                       
-                                </div>
-                                 <div style='margin:8px -3px -7px 25px ;' class='checkbox'>
-                                            <input class='all_check' name='all_checkbox' type="checkbox" id="checkAll">
-                                            <label for='checkAll'>Check All</label>                                             
-                                </div>                                
-                                <div style='padding-top:6px; max-height: 600px; overflow: auto;' id='collapseheading_tables_column' >
-                                    <div style='margin: 0px 0px 0px 25px;' id='json_columns' > </div>
-                                </div>                               
-                            </div> 
-
-
-
-                            <button class="btn " id="show_selected">Export</button> 
-                            <button class="btn " id="custom_excel_cancel">Cancel</button>  
-                        </div> 
-                    </div>                
-                </div> 
-                <div id="expand_list_footer0" class="modal-footer">                       
-                </div>                      
-            </div>     
-        </div>
-    </div>
-</div>  -->
 <!--                       Safe Save Modal                             -->
         <div  class="modal fade" id="successful_save" role="dialog">
             <div class="modal-dialog">    
@@ -465,11 +401,6 @@ below.
 		<script src="../js/jquery.hotkeys.js"></script>
         <script src="../js/alasql.min.js"></script> 
     <script src="../js/xlsx0.7.12.core.min.js"></script> 
-
- 
-             
-        <!-- <script src="js/Payroll_export_import.js"></script>  -->
-
     </body>
 </html>
 
