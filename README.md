@@ -62,7 +62,7 @@ FastCat uses [handsontable](https://handsontable.com/) library for some data ent
 
  1. Database configuration
  
-     After the successful CouchDB installation, database must have the following structure: 
+     After successful CouchDB installation, database must have the following structure: 
  
            ├── _users
            ├── admin
@@ -99,7 +99,22 @@ FastCat uses [handsontable](https://handsontable.com/) library for some data ent
      
 ## Configuration of Transcription Templates ##
 
-tbc
+To configure/create a new Template the following steps must be followed: 
+
+1. FastCat Application
+   Each template consists of two files: 
+   * templates/template.html (example)
+   * templates/js/template.js (example) 
+   
+   By editing these two files user can create/modify templates.
+  
+2. Database
+
+   To add a new template in the database : 
+   * Go to templates directory and copy one existing template
+   * Return to templates directory and Create Document
+   * Paste the json you copied before
+   * delete the "_rev" row and change the "_id" value to be excact the same with the name of the new template
 
 ## Contact ##
 
