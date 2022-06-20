@@ -48,7 +48,7 @@ ACM Journal on Computing and Cultural Heritage, 2021.
 
 ### Dependency
 
-FastCat uses [handsontable](https://handsontable.com/) library for some data entry functionalities. If you use this project for commercial purposes (whether in internal or externally facing projects), you need to purchase a [Handsontable license](https://handsontable.com/pricing).
+FastCat uses [handsontable](https://handsontable.com/) library for some data entry functionalities. **If you use this project for commercial purposes (whether in internal or externally facing projects), you need to purchase a [Handsontable license](https://handsontable.com/pricing).**
 
 ### Prerequisites
 
