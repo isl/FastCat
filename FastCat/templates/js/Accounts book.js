@@ -1,4 +1,3 @@
-///////////////////SAM mikroi pinakes//////////////////////////////////////////
 
 function createSubTable(parentTableName, subTableName, x, y, row, startCol, endCol) {
     $(".sub_table").remove();
