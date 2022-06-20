@@ -97,7 +97,31 @@ FastCat uses [handsontable](https://handsontable.com/) library for some data ent
      
 ## Configuration of Transcription Templates ##
 
-To configure/create a new Template the following steps must be followed: 
+FastCat is currently configured for the case of archival documents of Maritime History, in the context of the [SeaLiT Project](https://sealitproject.eu/).
+Specifically, the below 20 templates are already available, each one representing a type of archival source:
+- Crew List (Ruoli di Equipaggio) (example record [here](https://tinyurl.com/2u35frya))
+- Crew and displacement list (Roll) (example record [here](https://tinyurl.com/4ukzezfe))
+- General Spanish Crew List (64 records) (example record [here](https://tinyurl.com/3axs6ret))
+- Accounts book (example record [here](https://tinyurl.com/4uf3bye8))
+- Payroll (of Greek ships) (example record [here](https://tinyurl.com/ztjk4jw7))
+- Payroll (of Russian Steam Navigation and Trading Company) (example record [here](https://tinyurl.com/y5urjhc9))
+- Logbook (example record [here](https://tinyurl.com/mrx2re9k))
+- Census La Ciotat (example record [here](https://tinyurl.com/4dzfcbtt))
+- First national all-Russian census of the Russian Empire (example record [here](https://tinyurl.com/43xczvux))
+- Civil Register (example record [here](https://tinyurl.com/bdzeja8n))
+- Inscription Maritime - Maritime Register of the State for La Ciotat (example record [here](https://tinyurl.com/fkhyyp4a))
+- List of ships (example record [here](https://tinyurl.com/2cphfpef))
+- Naval Ship Register List (example record [here](https://tinyurl.com/bdhx87tr))
+- Register of Maritime personel (example record [here](https://tinyurl.com/4v6hnwjj))
+- Register of Maritime workers (Matricole della gente di mare) (example record [here]())
+- Sailors register (Libro de registro de marineros) (example record [here](https://tinyurl.com/2p8kzm6n))
+- Seagoing Personel (example record [here](https://tinyurl.com/2x5cu37n))
+- Students Register (example record [here](https://tinyurl.com/mryp6cbb))
+- Employment records (Shipyards of Messageries Maritimes, La Ciotat) (example record [here](https://tinyurl.com/yc3havkc))
+- Notarial Deeds (example record [here]())
+
+
+To create a new template the following steps must be followed: 
 
 1. FastCat Application
 
