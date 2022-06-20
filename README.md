@@ -38,30 +38,49 @@ ACM Journal on Computing and Cultural Heritage, 2021.
 - Instuctions on how to use FastCat Team: [FastCat Team User Guide](https://isl.ics.forth.gr/FastCatTeam/Manual%20Fast%20Cat%20Team_Version%202.1.pdf)
 
 
-## Installation and Use ##
+### Built With
 
-**Dependency**
+* [jQuery](https://jquery.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [handsontable](https://handsontable.com/)
+* [CouchDB](https://couchdb.apache.org/)
+
+
+## Getting Started
+
+### Dependency
 
 FastCat uses [handsontable](https://handsontable.com/) library for some data entry functionalities. If you use this project for commercial purposes (whether in internal or externally facing projects), you need to purchase a [Handsontable license](https://handsontable.com/pricing).
 
-**Set up**
+### Prerequisites
 
-This project is written mainly in JavaScript so it can be deployed directly on a web server (eg. Tomcat v7 or greater).
+* Java
+* Tomcat
+* CouchDB (installation documentation can be found [here](https://docs.couchdb.org/en/stable/install/index.html))
 
-**Database configuration**
+### Installation and deployment
 
-FastCat uses [CouchDB](https://couchdb.apache.org/) and [PouchDB](https://pouchdb.com/) for storing and syncronizing all the data so a basic configuration must be done by editing the database urls in the 
-/js/global.js file
+ 1. Database configuration
+ 
+     After the successful CouchDB installation, the database must contain a directory called public_records and a directory for each entity that is          needed to be documented/extracted (persons/organizations etc.).
+  
+2. Clone the repo
+   ```sh
+   git clone https://github.com/isl/FastCat.git
+   ```
+3. The project is written mainly in JavaScript so it can be deployed directly on a web server (eg. Tomcat v7 or greater). 
+    Before deployment a basic configuration must be done by editing the database urls in the 
+    /js/global.js file
 
-```json
-    "config": {
-        "": {
-            "http:": "http://[URL]:[PORT]",
-            "https:": "https://[URL]"
-        }      
-    }
-```
-
+    ```json
+        "config": {
+            "": {
+                "http:": "http://[URL]:[PORT]",
+                "https:": "https://[URL]"
+            }      
+        }
+    ```
+     
 ## Configuration of Transcription Templates ##
 
 tbc
