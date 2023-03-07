@@ -129,9 +129,9 @@ To create a new template the following steps must be followed:
 1. FastCat Application
 
    Each template consists of two files: 
-   * templates/<template_name>.html  [example](https://github.com/isl/FastCat/blob/main/FastCat/templates/js/Payroll.js)
+   * templates/<template_name>.html  [example](https://github.com/isl/FastCat/blob/main/FastCat/templates/Payroll.html)
 
-   * templates/js/<template_name>.js  [example](https://github.com/isl/FastCat/blob/main/FastCat/templates/Payroll.html) 
+   * templates/js/<template_name>.js  [example](https://github.com/isl/FastCat/blob/main/FastCat/templates/js/Payroll.js) 
    
    By editing these two files user can create/modify templates.
   
